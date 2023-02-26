@@ -1,0 +1,29 @@
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__title {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.contacts__address,
+.contacts__phone {
+  font-family: $ff-ptmono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-transparent;
+  margin-bottom: 10px;
+  width: 345px;
+}

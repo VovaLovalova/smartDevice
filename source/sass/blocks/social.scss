@@ -1,0 +1,23 @@
+.social {
+  position: absolute;
+  top: 135px;
+  left: 360px;
+}
+
+.social__list {
+  list-style-type: none;
+  width: 150px;
+  height: 40px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social__link {
+  fill: $color-alice-blue;
+}
+
+.social__link:hover {
+  fill: $color-deep-sky-blue;
+}

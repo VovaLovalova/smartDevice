@@ -1,0 +1,33 @@
+.goods {
+  width: 100%;
+  min-height: 960px;
+  background-color: $color-black-pearl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goods__container {
+  width: 1920px;
+  min-height: 100%;
+  padding: 70px 350px 140px;
+}
+
+.goods__text {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.goods__list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  column-gap: 85px;
+}

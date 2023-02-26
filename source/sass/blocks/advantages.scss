@@ -1,0 +1,23 @@
+.advantages {
+  width: 100%;
+  min-height: 880px;
+  background-color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__container {
+  width: 1920px;
+  min-height: 100%;
+  padding: 120px 350px;
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 595px 595px;
+  column-gap: 30px;
+  row-gap: 30px;
+}

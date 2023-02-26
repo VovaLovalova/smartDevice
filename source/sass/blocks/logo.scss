@@ -1,0 +1,32 @@
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 160px;
+  width: 215px;
+}
+
+.logo__image {
+  margin-right: 15px;
+}
+
+
+.logo__text {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  color: $color-alice-blue;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.logo__description {
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-transparent;
+  margin: 0;
+}

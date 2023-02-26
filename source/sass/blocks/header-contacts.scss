@@ -1,0 +1,25 @@
+.header-contacts {
+  margin-right: 145px;
+}
+
+.header-contacts__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.header-contacts__image {
+  margin-right: 15px;
+}
+
+.header-contacts__link {
+  font-family: $ff-ptmono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-alice-blue;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,65 @@
+.advantages-card {
+  width: 595px;
+  height: 300px;
+  background-color: $color-default-white;
+  border: 1px solid $color-whisper;
+  padding: 40px 45px;
+  position: relative;
+}
+
+.advantages-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 5px;
+  height: 299px;
+  background-color: $color-deep-sky-blue;
+}
+
+.advantages-card__image {
+  margin-bottom: 20px;
+  fill: $color-deep-sky-blue;
+  ;
+}
+
+.advantages-card__title {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: $color-deep-sky-blue;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.advantages-card__text {
+  font-family: $ff-ptmono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: $color-black-pearl;
+  margin: 0;
+}
+
+.advantages-card:hover,
+.advantages-card:focus {
+  background-color: $color-deep-sky-blue;
+}
+
+.advantages-card:hover .advantages-card__title,
+.advantages-card:focus .advantages-card__title {
+  color: $color-default-white;
+}
+
+.advantages-card:hover .advantages-card__text,
+.advantages-card:focus .advantages-card__text {
+  color: $color-default-white;
+}
+
+.advantages-card:hover .advantages-card__image,
+.advantages-card:focus .advantages-card__image {
+  fill: $color-default-white;
+}

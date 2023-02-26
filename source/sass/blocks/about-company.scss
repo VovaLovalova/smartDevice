@@ -1,0 +1,81 @@
+.about-company {
+  width: 100%;
+  min-height: 420px;
+  background-color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-company__container {
+  width: 1920px;
+  min-height: 100%;
+  padding: 5px 350px 120px;
+  position: relative;
+}
+
+.about-company__title {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-black-pearl;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-left: 250px;
+}
+
+.about-company__text-container {
+  margin-left: 250px;
+  overflow-y: hidden;
+  margin-bottom: 20px;
+  height: 170px;
+}
+
+// .about-company__text-container--close {
+//   height: 170px;
+// }
+
+// .about-company__text-container--open {
+//   height: auto;
+// }
+
+.about-company__text {
+  font-family: $ff-ptmono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-black-pearl;
+}
+
+.about-company__button {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-deep-sky-blue;
+  padding: 14px 12px;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+  background-color: transparent;
+  margin-left: 250px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.about-company__button:hover, .about-company__button:focus {
+  color: $color-default-white;
+  background-color: $color-deep-sky-blue;
+}
+
+.about-company__image {
+  position: absolute;
+  top: 0;
+  left: 350px;
+}

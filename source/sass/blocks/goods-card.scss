@@ -1,0 +1,57 @@
+.goods-card {
+  width: 350px;
+  height: 650px;
+  background-image: url("../../img/goods/card1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.goods-card::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 289px;
+  top: 590px;
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px 0px 0px 0px;
+  background-image: url("../../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.goods-card--1 {
+  background-image: url("../../img/goods/card1.png");
+}
+
+.goods-card--2 {
+  background-image: url("../../img/goods/card2.png");
+}
+
+.goods-card--3 {
+  background-image: url("../../img/goods/card3.png");
+}
+
+.goods-card__link {
+  display: block;
+  width: 350px;
+  height: 650px;
+  padding: 50px 40px;
+  background-color: rgba(4, 24, 39, 0.5);
+}
+
+.goods-card__link:hover, .goods-card__link:focus {
+  background-color: rgba(4, 24, 39, 0);
+}
+
+.goods-card__title {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+  margin: 0;
+}
