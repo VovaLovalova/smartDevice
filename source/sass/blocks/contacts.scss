@@ -1,3 +1,7 @@
+.contacts {
+  padding-top: 9px;
+}
+
 .contacts__container {
   display: flex;
   flex-direction: column;
@@ -13,7 +17,7 @@
   text-transform: uppercase;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .contacts__address,
@@ -26,4 +30,8 @@
   color: $color-transparent;
   margin-bottom: 10px;
   width: 345px;
+}
+
+.contacts__button {
+  display: none;
 }

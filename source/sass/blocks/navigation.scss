@@ -1,6 +1,7 @@
 .navigation {
   width: 470px;
   margin-right: 30px;
+  padding-top: 9px;
 }
 
 .navigation__title {
@@ -13,7 +14,7 @@
   text-transform: uppercase;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .navigation__list {
@@ -27,12 +28,12 @@
 }
 
 .navigation__item {
-  width: 220px;
+  width: 249px;
   min-height: 20px;
 }
 
 .navigation__item:not(:nth-child(4)) {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .navigation__link {
@@ -46,4 +47,8 @@
 
 .navigation__link:hover, .navigation__link:focus {
   color: $color-deep-sky-blue;
+}
+
+.navigation__button {
+  display: none;
 }

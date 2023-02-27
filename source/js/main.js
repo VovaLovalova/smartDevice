@@ -69,14 +69,8 @@ window.addEventListener('DOMContentLoaded', () => {
   let textContainer = document.querySelector('.about-company__text-container');
 
   let onOpenButtonClick = function (e) {
-    // textContainer.classList.toggle('about-company__text-container--close');
+    textContainer.classList.toggle('about-company__text-container--close');
     textContainer.classList.toggle('about-company__text-container--open');
-
-    if (textContainer.classList.contains('about-company__text-container--open')) {
-      textContainer.style.height = 'auto';
-    } else {
-      textContainer.style.height = '170px';
-    }
 
     if (textContainer.classList.contains('about-company__text-container--open')) {
       e.target.textContent = 'Свернуть';

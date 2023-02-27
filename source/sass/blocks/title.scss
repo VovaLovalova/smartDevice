@@ -14,7 +14,7 @@
 .title__container {
   width: 1920px;
   min-height: 100%;
-  padding: 305px 80px 80px 475px;
+  padding: 301px 80px 80px 475px;
 }
 
 .title__title {
@@ -23,11 +23,11 @@
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.085em;
   text-transform: uppercase;
   color: $color-alice-blue;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .title__text {
@@ -38,7 +38,7 @@
   line-height: 155%;
   color: $color-alice-blue;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 62px;
 }
 
 .title__button {
@@ -48,7 +48,7 @@
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.065em;
   text-transform: uppercase;
   color: $color-alice-blue;
   padding: 15px 25px;
