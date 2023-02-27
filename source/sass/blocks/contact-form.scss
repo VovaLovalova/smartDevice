@@ -110,7 +110,7 @@
 
 .contact-form__name:hover,
 .contact-form__phone:hover,
-.contact-form__question:hover{
+.contact-form__question:hover {
   border: 1px solid $color-default-white;
   outline: none;
 }
@@ -198,7 +198,70 @@
   border: none;
 }
 
-.contact-form__button:hover, .contact-form__button:focus {
+.contact-form__button:hover,
+.contact-form__button:focus {
   background-color: $color-cerulean-dark;
   border: none;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .contact-form {
+    height: 580px;
+  }
+
+  .contact-form__container {
+    width: 770px;
+    padding: 44px 50px 120px;
+  }
+
+  .contact-form__container::before {
+    display: none;
+  }
+
+  .contact-form__container::after {
+    display: none;
+  }
+
+  .contact-form__image {
+    display: none;
+  }
+
+  .contact-form__title {
+    margin-bottom: 7px;
+  }
+
+  .contact-form__text {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  .contact-form__name,
+  .contact-form__phone {
+    width: 320px;
+  }
+
+  .contact-form__question {
+    width: 670px;
+    padding-top: 30px;
+  }
+
+  .contact-form__input-container {
+    grid-template-columns: 320px 320px;
+    column-gap: 30px;
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+  .contact-form__confirm-container {
+    margin-left: 0;
+  }
+
+  .contact-form__button {
+    margin-right: 85px;
+    padding: 15px 25px 13px;
+  }
+
+  .contact-form__agreement-label {
+    margin-top: 10px;
+}
 }

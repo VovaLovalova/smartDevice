@@ -35,3 +35,17 @@
 .contacts__button {
   display: none;
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .contacts {
+    padding-top: 2px;
+  }
+
+  .contacts__title {
+    margin-bottom: 22px;
+  }
+
+  .contacts__address {
+    margin-bottom: 12px;
+  }
+}

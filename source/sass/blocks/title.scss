@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
-  line-height: 155%;
+  line-height: 34px;
   color: $color-alice-blue;
   margin: 0;
   margin-bottom: 62px;
@@ -58,4 +58,32 @@
 
 .title__button:hover, .title__button:focus {
   background-color: $color-cerulean;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .title {
+    min-height: 640px;
+    margin-top: -15px;
+    background-image: url("../../img/main-bg-tablet.png");
+  }
+
+  .title__container {
+    width: 770px;
+    padding: 192px 50px 218px;
+  }
+
+  .title__title {
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: 0.085em;
+    margin-bottom: 4px;
+  }
+
+  .title__text {
+    margin-bottom: 73px;
+  }
+
+  .title__button {
+    margin-left: 46px;
+  }
 }

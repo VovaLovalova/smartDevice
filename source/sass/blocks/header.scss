@@ -35,7 +35,26 @@
   width: 160px;
 }
 
-.header__button:hover, .header__button:focus {
+.header__button:hover {
   color: $color-black-pearl;
   background-color: $color-alice-blue;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .header {
+    position: absolute;
+    padding-top: 20px;
+    height: 100px;
+    top: 0;
+    left: 0;
+  }
+
+  .header__container {
+    width: 770px;
+    padding-left: 50px;
+  }
+
+  .header__button {
+    display: none;
+  }
 }

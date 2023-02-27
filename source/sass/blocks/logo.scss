@@ -29,3 +29,14 @@
   color: $color-transparent;
   margin: 0;
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .logo {
+    margin-right: 344px;
+  }
+
+  .logo__text {
+    margin-top: -1px;
+    margin-bottom: 2px;
+  }
+}

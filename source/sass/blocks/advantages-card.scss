@@ -20,7 +20,6 @@
 .advantages-card__image {
   margin-bottom: 14px;
   fill: $color-deep-sky-blue;
-  ;
 }
 
 .advantages-card__title {
@@ -62,4 +61,24 @@
 .advantages-card:hover .advantages-card__image,
 .advantages-card:focus .advantages-card__image {
   fill: $color-default-white;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .advantages-card {
+    width: 320px;
+    height: 360px;
+    padding: 40px 35px 35px 45px;
+  }
+
+  .advantages-card::before {
+    height: 359px;
+  }
+
+  .advantages-card__image {
+    margin-bottom: 8px;
+  }
+
+  .advantages-card__title {
+    margin-bottom: 9px;
+  }
 }

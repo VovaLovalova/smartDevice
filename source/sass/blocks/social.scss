@@ -21,3 +21,10 @@
 .social__link:hover {
   fill: $color-deep-sky-blue;
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .social {
+    top: 42px;
+    left: 575px;
+  }
+}

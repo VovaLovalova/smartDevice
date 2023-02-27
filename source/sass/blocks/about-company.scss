@@ -80,3 +80,35 @@
   top: 6px;
   left: 350px;
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .about-company {
+    min-height: 460px;
+  }
+
+  .about-company__container {
+    width: 770px;
+    padding: 42px 50px 80px;
+  }
+
+  .about-company__image {
+    top: 46px;
+    left: 46px;
+  }
+
+  .about-company__title {
+    margin-left: 175px;
+  }
+
+  .about-company__text-container {
+    margin-left: 175px;
+  }
+
+  .about-company__text-container--close {
+    height: 255px;
+  }
+
+  .about-company__button {
+    margin-left: 175px;
+  }
+}

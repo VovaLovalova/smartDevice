@@ -52,3 +52,19 @@
 .navigation__button {
   display: none;
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .navigation {
+    width: 320px;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .navigation__list {
+    height: 230px;
+  }
+
+  .navigation__item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}

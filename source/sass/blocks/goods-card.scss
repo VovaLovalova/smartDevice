@@ -1,7 +1,6 @@
 .goods-card {
   width: 350px;
   height: 650px;
-  background-image: url("../../img/goods/card1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -54,4 +53,37 @@
   line-height: 30px;
   color: $color-default-white;
   margin: 0;
+}
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .goods-card {
+    width: 670px;
+    height: 250px;
+  }
+
+  .goods-card::before {
+    left: 610px;
+    top: 190px;
+  }
+
+  .goods-card--1 {
+    background-image: url("../../img/goods/card1-tablet.jpg");
+  }
+
+  .goods-card--2 {
+    background-image: url("../../img/goods/card2-tablet.jpg");
+  }
+
+  .goods-card--3 {
+    background-image: url("../../img/goods/card3-tablet.jpg");
+  }
+
+  .goods-card__link {
+    display: block;
+    width: 670px;
+    height: 250px;
+    padding: 37px 45px 80px;
+    background-color: rgba(4, 24, 39, 0.5);
+  }
 }

@@ -21,3 +21,18 @@
   column-gap: 30px;
   row-gap: 30px;
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .advantages  {
+    height: 830px;
+  }
+
+  .advantages__container {
+    width: 770px;
+    padding: 64px 50px 34px;
+  }
+
+  .advantages__list {
+    grid-template-columns: 320px 320px;
+  }
+}
