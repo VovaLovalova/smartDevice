@@ -38,7 +38,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 135%;
+  line-height: 16px;
   color: $color-black-pearl;
   margin: 0;
 }
@@ -80,5 +80,34 @@
 
   .advantages-card__title {
     margin-bottom: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages-card {
+    width: 270px;
+    height: 340px;
+    padding: 30px;
+  }
+
+  .advantages-card::before {
+    height: 339px;
+  }
+
+  .advantages-card__image {
+    margin-bottom: 20px;
+  }
+
+  .advantages-card__title {
+    margin-bottom: 15px;
+  }
+
+  .advantages-card__title {
+    font-size: 20px;
+  }
+
+  .advantages-card__text {
+    font-size: 14px;
+    line-height: 19px;
   }
 }

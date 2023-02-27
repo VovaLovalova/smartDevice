@@ -263,5 +263,51 @@
 
   .contact-form__agreement-label {
     margin-top: 10px;
+  }
 }
+
+@media (max-width: 767px) {
+  .contact-form {
+    min-height: 750px;
+  }
+
+  .contact-form__container {
+    width: 320px;
+    padding: 50px 25px 90px;
+  }
+
+  .contact-form__container::before {
+    display: none;
+  }
+
+  .contact-form__container::after {
+    display: none;
+  }
+
+  .contact-form__image {
+    display: none;
+  }
+
+  .contact-form__name,
+  .contact-form__phone {
+    width: 270px;
+  }
+
+  .contact-form__question {
+    width: 270px;
+    padding-top: 30px;
+  }
+
+  .contact-form__input-container {
+    grid-template-columns: 270px;
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+  .contact-form__confirm-container {
+    display: flex;
+    flex-direction:column-reverse;
+    justify-content: flex-end;
+    margin-left: 5px;
+  }
 }

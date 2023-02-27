@@ -112,3 +112,34 @@
     margin-left: 175px;
   }
 }
+
+@media (max-width: 767px) {
+  .about-company {
+    min-height: 385px;
+  }
+
+  .about-company__container {
+    width: 320px;
+    padding: 0 25px 80px;
+  }
+
+  .about-company__image {
+    display: none;
+  }
+
+  .about-company__title {
+    margin-left: 0;
+  }
+
+  .about-company__text-container {
+    margin-left: 0;
+  }
+
+  .about-company__text-container--close {
+    height: 256px;
+  }
+
+  .about-company__button {
+    margin-left: 0;
+  }
+}

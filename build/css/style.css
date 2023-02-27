@@ -456,7 +456,7 @@ button,
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 135%;
+  line-height: 16px;
   color: #041827;
   margin: 0;
 }
@@ -602,6 +602,10 @@ button,
   color: #ffffff;
   margin: 0;
   margin-bottom: 53px;
+}
+
+.goods__text--mobile {
+  display: none;
 }
 
 .goods__list {
@@ -1371,6 +1375,259 @@ button,
     }
   }
 */
+
+@media (max-width: 768px) {
+  .title {
+    min-height: 560px;
+    margin-top: 0;
+    background-image: url("../../img/main-bg-mobile.png");
+  }
+
+  .title__container {
+    width: 320px;
+    padding: 150px 20px 190px;
+  }
+
+  .advantages-card {
+    width: 270px;
+    height: 340px;
+    padding: 30px;
+  }
+
+  .advantages-card::before {
+    height: 339px;
+  }
+
+  .advantages-card__image {
+    margin-bottom: 20px;
+  }
+
+  .advantages-card__title {
+    margin-bottom: 15px;
+  }
+
+  .advantages-card__title {
+    font-size: 20px;
+  }
+
+  .advantages-card__text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    margin-right: 124px;
+  }
+
+  .logo__container {
+    display: none;
+  }
+
+  .logo__image {
+    width: 35px;
+    height: 35px;
+    margin-right: 0;
+  }
+
+  .header-contacts__link-text {
+    display: none;
+  }
+
+  .header-contacts__wrapper {
+    width: 100px;
+  }
+
+  .header {
+    position: absolute;
+    padding-top: 10px;
+    height: 70px;
+    top: 0;
+    left: 0;
+  }
+
+  .header__container {
+    width: 320px;
+    padding-left: 26px;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .advantages {
+    min-height: 1420px;
+  }
+
+  .advantages__container {
+    width: 320px;
+    padding: 50px 25px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
+  }
+
+  .about-company {
+    min-height: 385px;
+  }
+
+  .about-company__container {
+    width: 320px;
+    padding: 0 25px 80px;
+  }
+
+  .about-company__image {
+    display: none;
+  }
+
+  .about-company__title {
+    margin-left: 0;
+  }
+
+  .about-company__text-container {
+    margin-left: 0;
+  }
+
+  .about-company__text-container--close {
+    height: 256px;
+  }
+
+  .about-company__button {
+    margin-left: 0;
+  }
+
+  .goods {
+    min-height: 1096px;
+  }
+
+  .goods__container {
+    width: 320px;
+    padding: 50px 25px 86px;
+  }
+
+  .goods__list {
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
+    row-gap: 30px;
+  }
+
+  .goods__text {
+    display: none;
+  }
+
+  .goods__text--mobile {
+    display: block;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    color: #ffffff;
+  }
+
+  .goods-card {
+    width: 270px;
+    height: 250px;
+  }
+
+  .goods-card::before {
+    left: 230px;
+    top: 210px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .goods-card--1 {
+    background-image: url("../../img/goods/card1-mobile.jpg");
+  }
+
+  .goods-card--2 {
+    background-image: url("../../img/goods/card2-mobile.jpg");
+  }
+
+  .goods-card--3 {
+    background-image: url("../../img/goods/card3-mobile.jpg");
+  }
+
+  .goods-card__link {
+    display: block;
+    width: 270px;
+    height: 250px;
+    padding: 37px 45px 80px;
+    background-color: rgba(4, 24, 39, 0.5);
+  }
+
+  .contact-form {
+    min-height: 750px;
+  }
+
+  .contact-form__container {
+    width: 320px;
+    padding: 50px 25px 90px;
+  }
+
+  .contact-form__container::before {
+    display: none;
+  }
+
+  .contact-form__container::after {
+    display: none;
+  }
+
+  .contact-form__image {
+    display: none;
+  }
+
+  .contact-form__name,
+  .contact-form__phone {
+    width: 270px;
+  }
+
+  .contact-form__question {
+    width: 270px;
+    padding-top: 30px;
+  }
+
+  .contact-form__input-container {
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+  .contact-form__confirm-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-left: 5px;
+  }
+
+  .footer {
+    min-height: 325px;
+  }
+
+  .footer__container {
+    width: 320px;
+    padding: 35px 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 1023px) and (min-width: 768px) {
   .logo {

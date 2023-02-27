@@ -34,3 +34,16 @@
     grid-row: 1/2;
   }
 }
+
+@media (max-width: 767px) {
+  .footer {
+    min-height: 325px;
+  }
+
+  .footer__container {
+    width: 320px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}

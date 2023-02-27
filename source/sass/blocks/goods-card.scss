@@ -87,3 +87,37 @@
     background-color: rgba(4, 24, 39, 0.5);
   }
 }
+
+@media (max-width: 767px) {
+  .goods-card {
+    width: 270px;
+    height: 250px;
+  }
+
+  .goods-card::before {
+    left: 230px;
+    top: 210px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .goods-card--1 {
+    background-image: url("../../img/goods/card1-mobile.jpg");
+  }
+
+  .goods-card--2 {
+    background-image: url("../../img/goods/card2-mobile.jpg");
+  }
+
+  .goods-card--3 {
+    background-image: url("../../img/goods/card3-mobile.jpg");
+  }
+
+  .goods-card__link {
+    display: block;
+    width: 270px;
+    height: 250px;
+    padding: 37px 45px 80px;
+    background-color: rgba(4, 24, 39, 0.5);
+  }
+}

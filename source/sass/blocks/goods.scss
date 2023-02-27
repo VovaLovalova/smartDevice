@@ -24,6 +24,10 @@
   margin-bottom: 53px;
 }
 
+.goods__text--mobile {
+  display: none;
+}
+
 .goods__list {
   list-style-type: none;
   padding: 0;
@@ -49,5 +53,35 @@
 
   .goods__text {
     margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .goods {
+    min-height: 1096px;
+  }
+
+  .goods__container {
+    width: 320px;
+    padding: 50px 25px 86px;
+  }
+
+  .goods__list {
+    grid-template-columns: 270px;
+    row-gap: 30px;
+  }
+
+  .goods__text {
+    display: none;
+  }
+
+  .goods__text--mobile {
+    display: block;
+    font-family: $ff-roboto-condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    color: $color-default-white;
   }
 }

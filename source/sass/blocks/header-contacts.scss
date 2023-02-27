@@ -40,5 +40,15 @@
 
   .header-contacts__image {
     margin-right: 18px;
+  }
 }
+
+@media (max-width: 767px) {
+  .header-contacts__link-text {
+    display: none;
+  }
+
+  .header-contacts__wrapper {
+    width: 100px;
+  }
 }

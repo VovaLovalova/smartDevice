@@ -87,3 +87,16 @@
     margin-left: 46px;
   }
 }
+
+@media (max-width: 768px) {
+  .title {
+    min-height: 560px;
+    margin-top: 0;
+    background-image: url("../../img/main-bg-mobile.png");
+  }
+
+  .title__container {
+    width: 320px;
+    padding: 150px 20px 190px;
+  }
+}

@@ -36,3 +36,18 @@
     grid-template-columns: 320px 320px;
   }
 }
+
+@media (max-width: 767px) {
+  .advantages  {
+    min-height: 1420px;
+  }
+
+  .advantages__container {
+    width: 320px;
+    padding: 50px 25px;
+  }
+
+  .advantages__list {
+    grid-template-columns: 270px;
+  }
+}
