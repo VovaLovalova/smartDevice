@@ -51,6 +51,10 @@
   margin-bottom: 20px;
 }
 
+.about-company__text--mobile {
+  display: none;
+}
+
 .about-company__button {
   font-family: $ff-roboto-condensed;
   font-style: normal;
@@ -128,18 +132,33 @@
   }
 
   .about-company__title {
+    font-size: 28px;
+    line-height: 39px;
     margin-left: 0;
+  }
+
+  .about-company__text {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+
+  .about-company__text--mobile {
+    display: block;
   }
 
   .about-company__text-container {
     margin-left: 0;
+    margin-bottom: 17px;
   }
 
   .about-company__text-container--close {
-    height: 256px;
+    height: 204px;
   }
 
   .about-company__button {
+    width: 160px;
+    padding: 8px 12px;
     margin-left: 0;
   }
 }

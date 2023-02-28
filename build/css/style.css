@@ -381,6 +381,10 @@ button,
   background-color: #0072a3;
 }
 
+.title__button--small {
+  display: none;
+}
+
 .advantages {
   width: 100%;
   min-height: 864px;
@@ -431,7 +435,7 @@ button,
   top: 0;
   left: -1px;
   width: 5px;
-  height: 299px;
+  height: 100%;
   background-color: #00b2ff;
 }
 
@@ -539,6 +543,10 @@ button,
   color: #041827;
   margin: 0;
   margin-bottom: 20px;
+}
+
+.about-company__text--mobile {
+  display: none;
 }
 
 .about-company__button {
@@ -1387,7 +1395,41 @@ button,
 
   .title__container {
     width: 320px;
-    padding: 150px 20px 190px;
+    padding: 149px 25px 70px;
+  }
+
+  .title__title {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.07em;
+    margin-bottom: 9px;
+  }
+
+  .title__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 44px;
+  }
+
+  .title__text-br {
+    display: none;
+  }
+
+  .title__button--big {
+    display: none;
+  }
+
+  .title__button--small {
+    display: inline;
+  }
+
+  .title__button {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    width: auto;
+    display: block;
+    padding: 12px 25px;
   }
 
   .advantages-card {
@@ -1396,16 +1438,22 @@ button,
     padding: 30px;
   }
 
-  .advantages-card::before {
-    height: 339px;
+  .advantages-card:nth-child(3) {
+    height: 325px;
+  }
+
+  .advantages-card:nth-child(4) {
+    height: 325px;
   }
 
   .advantages-card__image {
-    margin-bottom: 20px;
+    margin-bottom: 6px;
+    width: 30px;
+    height: 30px;
   }
 
   .advantages-card__title {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
   }
 
   .advantages-card__title {
@@ -1420,7 +1468,8 @@ button,
 
 @media (max-width: 767px) {
   .logo {
-    margin-right: 124px;
+    margin-right: 133px;
+    width: 35px;
   }
 
   .logo__container {
@@ -1433,8 +1482,19 @@ button,
     margin-right: 0;
   }
 
+  .footer__logo {
+    margin-right: 0;
+    width: 215px;
+    margin-left: 50px;
+  }
+
   .footer__logo .logo__container {
     display: block;
+  }
+
+  .footer__logo .logo__text {
+    margin-top: 0;
+    margin-bottom: 3px;
   }
 
   .footer__logo .logo__image {
@@ -1443,17 +1503,25 @@ button,
     margin-right: 15px;
   }
 
+  .header-contacts {
+    margin-right: 0;
+  }
+
   .header-contacts__link-text {
     display: none;
   }
 
   .header-contacts__wrapper {
-    width: 100px;
+    width: 82px;
+  }
+
+  .header-contacts__image {
+    margin-right: 0;
   }
 
   .header {
     position: absolute;
-    padding-top: 10px;
+    padding-top: 14px;
     height: 70px;
     top: 0;
     left: 0;
@@ -1474,12 +1542,13 @@ button,
 
   .advantages__container {
     width: 320px;
-    padding: 50px 25px;
+    padding: 50px 25px 47px;
   }
 
   .advantages__list {
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
+    margin: 0;
   }
 
   .about-company {
@@ -1496,28 +1565,43 @@ button,
   }
 
   .about-company__title {
+    font-size: 28px;
+    line-height: 39px;
     margin-left: 0;
+  }
+
+  .about-company__text {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+
+  .about-company__text--mobile {
+    display: block;
   }
 
   .about-company__text-container {
     margin-left: 0;
+    margin-bottom: 17px;
   }
 
   .about-company__text-container--close {
-    height: 256px;
+    height: 204px;
   }
 
   .about-company__button {
+    width: 160px;
+    padding: 8px 12px;
     margin-left: 0;
   }
 
   .goods {
-    min-height: 1096px;
+    min-height: 1052px;
   }
 
   .goods__container {
     width: 320px;
-    padding: 50px 25px 86px;
+    padding: 48px 25px 70px;
   }
 
   .goods__list {
@@ -1538,6 +1622,8 @@ button,
     font-size: 28px;
     line-height: 39px;
     color: #ffffff;
+    margin: 0;
+    margin-bottom: 29px;
   }
 
   .goods-card {
@@ -1550,6 +1636,10 @@ button,
     top: 210px;
     width: 40px;
     height: 40px;
+  }
+
+  .goods-card__title {
+    font-size: 18px;
   }
 
   .goods-card--1 {
@@ -1568,7 +1658,7 @@ button,
     display: block;
     width: 270px;
     height: 250px;
-    padding: 37px 45px 80px;
+    padding: 26px 30px 80px;
     background-color: rgba(4, 24, 39, 0.5);
   }
 
@@ -1578,7 +1668,7 @@ button,
 
   .contact-form__container {
     width: 320px;
-    padding: 50px 25px 90px;
+    padding: 45px 25px 90px;
   }
 
   .contact-form__container::before {
@@ -1593,6 +1683,19 @@ button,
     display: none;
   }
 
+  .contact-form__title {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 9px;
+  }
+
+  .contact-form__text {
+    font-size: 14px;
+    line-height: 19px;
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
   .contact-form__name,
   .contact-form__phone {
     width: 270px;
@@ -1600,14 +1703,15 @@ button,
 
   .contact-form__question {
     width: 270px;
-    padding-top: 30px;
+    padding-top: 24px;
+    height: 180px;
   }
 
   .contact-form__input-container {
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
     margin-left: 0;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   .contact-form__confirm-container {
@@ -1621,18 +1725,38 @@ button,
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    margin-left: 5px;
+    margin-left: 0;
+  }
+
+  .contact-form__button {
+    width: 100%;
+    padding: 13px 25px;
+  }
+
+  .contact-form__agreement-label {
+    margin-left: 31px;
+    margin-top: 23px;
+  }
+
+  .contact-form__agreement-label::after,
+  .contact-form__agreement-label::before {
+    top: 8px;
+    left: -26px;
+  }
+
+  .contact-form {
+    height: 580px;
   }
 
   .social {
-    top: 105px;
+    top: 92px;
     left: 87px;
   }
 
   .navigation {
     width: 320px;
     margin-right: 0;
-    padding: 20px 25px;
+    padding: 21px 25px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
   }
@@ -1642,7 +1766,10 @@ button,
   }
 
   .navigation__list {
-    height: 230px;
+    min-height: 203px;
+    margin-top: 10px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 
   .navigation__list--close {
@@ -1653,10 +1780,15 @@ button,
     margin-bottom: 5px;
   }
 
+  .navigation__link {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   .navigation__button {
     position: absolute;
     top: 20px;
-    left: 250px;
+    left: 279px;
     display: block;
     width: 15px;
     height: 15px;
@@ -1688,7 +1820,7 @@ button,
   .contacts {
     width: 320px;
     margin-right: 0;
-    padding: 20px 25px;
+    padding: 22px 24px;
     border-bottom: 1px solid #ffffff;
   }
 
@@ -1703,7 +1835,7 @@ button,
   .contacts__button {
     position: absolute;
     top: 20px;
-    left: 250px;
+    left: 279px;
     display: block;
     width: 15px;
     height: 15px;
@@ -1732,6 +1864,20 @@ button,
     background-color: #ffffff;
   }
 
+  .contacts__address {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 19px;
+    width: 270px;
+    margin-bottom: 17px;
+  }
+
+  .contacts__phone {
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 5px;
+  }
+
   .footer {
     min-height: 325px;
     height: auto;
@@ -1750,7 +1896,7 @@ button,
   }
 
   .footer__logo {
-    margin-bottom: 80px;
+    margin-bottom: 79px;
   }
 }
 
@@ -1842,10 +1988,6 @@ button,
     width: 320px;
     height: 360px;
     padding: 40px 35px 35px 45px;
-  }
-
-  .advantages-card::before {
-    height: 359px;
   }
 
   .advantages-card__image {

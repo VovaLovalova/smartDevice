@@ -58,12 +58,12 @@
 
 @media (max-width: 767px) {
   .goods {
-    min-height: 1096px;
+    min-height: 1052px;
   }
 
   .goods__container {
     width: 320px;
-    padding: 50px 25px 86px;
+    padding: 48px 25px 70px;
   }
 
   .goods__list {
@@ -83,5 +83,7 @@
     font-size: 28px;
     line-height: 39px;
     color: $color-default-white;
+    margin: 0;
+    margin-bottom: 29px;
   }
 }

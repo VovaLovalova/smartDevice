@@ -44,10 +44,11 @@
 
   .advantages__container {
     width: 320px;
-    padding: 50px 25px;
+    padding: 50px 25px 47px;
   }
 
   .advantages__list {
     grid-template-columns: 270px;
+    margin: 0;
   }
 }

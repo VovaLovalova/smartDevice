@@ -101,6 +101,10 @@
     height: 40px;
   }
 
+  .goods-card__title {
+    font-size: 18px;
+  }
+
   .goods-card--1 {
     background-image: url("../../img/goods/card1-mobile.jpg");
   }
@@ -117,7 +121,7 @@
     display: block;
     width: 270px;
     height: 250px;
-    padding: 37px 45px 80px;
+    padding: 26px 30px 80px;
     background-color: rgba(4, 24, 39, 0.5);
   }
 }

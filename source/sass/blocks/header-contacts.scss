@@ -44,11 +44,19 @@
 }
 
 @media (max-width: 767px) {
+  .header-contacts {
+    margin-right: 0;
+  }
+
   .header-contacts__link-text {
     display: none;
   }
 
   .header-contacts__wrapper {
-    width: 100px;
+    width: 82px;
+  }
+
+  .header-contacts__image {
+    margin-right: 0;
   }
 }

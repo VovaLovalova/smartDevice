@@ -74,7 +74,7 @@
   .navigation {
     width: 320px;
     margin-right: 0;
-    padding: 20px 25px;
+    padding: 21px 25px;
     border-top: 1px solid $color-default-white;
     border-bottom: 1px solid $color-default-white;
   }
@@ -84,7 +84,9 @@
   }
 
   .navigation__list {
-    height: 230px;
+    min-height: 203px;
+    margin-top: 10px;
+    flex-wrap: nowrap;
   }
 
   .navigation__list--close {
@@ -95,10 +97,15 @@
     margin-bottom: 5px;
   }
 
+  .navigation__link {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   .navigation__button {
     position: absolute;
     top: 20px;
-    left: 250px;
+    left: 279px;
     display: block;
     width: 15px;
     height: 15px;

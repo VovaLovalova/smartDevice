@@ -55,7 +55,7 @@
   .contacts {
     width: 320px;
     margin-right: 0;
-    padding: 20px 25px;
+    padding: 22px 24px;
     border-bottom: 1px solid $color-default-white;
   }
 
@@ -70,7 +70,7 @@
   .contacts__button {
     position: absolute;
     top: 20px;
-    left: 250px;
+    left: 279px;
     display: block;
     width: 15px;
     height: 15px;
@@ -97,5 +97,19 @@
     width: 1px;
     height: 15px;
     background-color: $color-default-white;
+  }
+
+  .contacts__address {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 19px;
+    width: 270px;
+    margin-bottom: 17px;
+  }
+
+  .contacts__phone {
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 5px;
   }
 }

@@ -13,7 +13,7 @@
   top: 0;
   left: -1px;
   width: 5px;
-  height: 299px;
+  height: 100%;
   background-color: $color-deep-sky-blue;
 }
 
@@ -70,10 +70,6 @@
     padding: 40px 35px 35px 45px;
   }
 
-  .advantages-card::before {
-    height: 359px;
-  }
-
   .advantages-card__image {
     margin-bottom: 8px;
   }
@@ -90,16 +86,22 @@
     padding: 30px;
   }
 
-  .advantages-card::before {
-    height: 339px;
+  .advantages-card:nth-child(3) {
+    height: 325px;
+  }
+
+  .advantages-card:nth-child(4) {
+    height: 325px;
   }
 
   .advantages-card__image {
-    margin-bottom: 20px;
+    margin-bottom: 6px;
+    width: 30px;
+    height: 30px;
   }
 
   .advantages-card__title {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
   }
 
   .advantages-card__title {

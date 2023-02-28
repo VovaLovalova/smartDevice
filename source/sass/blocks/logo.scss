@@ -43,7 +43,8 @@
 
 @media (max-width: 767px) {
   .logo {
-    margin-right: 124px;
+    margin-right: 133px;
+    width: 35px;
   }
 
   .logo__container {
@@ -56,8 +57,19 @@
     margin-right: 0;
   }
 
+  .footer__logo {
+    margin-right: 0;
+    width: 215px;
+    margin-left: 50px;
+  }
+
   .footer__logo .logo__container {
     display: block;
+  }
+
+  .footer__logo .logo__text {
+    margin-top: 0;
+    margin-bottom: 3px;
   }
 
   .footer__logo .logo__image {

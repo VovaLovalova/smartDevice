@@ -273,7 +273,7 @@
 
   .contact-form__container {
     width: 320px;
-    padding: 50px 25px 90px;
+    padding: 45px 25px 90px;
   }
 
   .contact-form__container::before {
@@ -288,6 +288,19 @@
     display: none;
   }
 
+  .contact-form__title {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 9px;
+  }
+
+  .contact-form__text {
+    font-size: 14px;
+    line-height: 19px;
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
   .contact-form__name,
   .contact-form__phone {
     width: 270px;
@@ -295,19 +308,40 @@
 
   .contact-form__question {
     width: 270px;
-    padding-top: 30px;
+    padding-top: 24px;
+    height: 180px;
   }
 
   .contact-form__input-container {
     grid-template-columns: 270px;
     margin-left: 0;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   .contact-form__confirm-container {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
     justify-content: flex-end;
-    margin-left: 5px;
+    margin-left: 0;
+  }
+
+  .contact-form__button {
+    width: 100%;
+    padding: 13px 25px;
+  }
+
+  .contact-form__agreement-label {
+    margin-left: 31px;
+    margin-top: 23px;
+  }
+
+  .contact-form__agreement-label::after,
+  .contact-form__agreement-label::before {
+    top: 8px;
+    left: -26px;
+  }
+
+  .contact-form {
+    height: 580px;
   }
 }
