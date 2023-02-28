@@ -1,5 +1,6 @@
 .contacts {
   padding-top: 9px;
+  position: relative;
 }
 
 .contacts__container {
@@ -47,5 +48,54 @@
 
   .contacts__address {
     margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    width: 320px;
+    margin-right: 0;
+    padding: 20px 25px;
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  .contacts__container--close {
+    display: none;
+  }
+
+  .contacts__title {
+    margin: 0;
+  }
+
+  .contacts__button {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .contacts__button::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 15px;
+    height: 1px;
+    background-color: $color-default-white;
+  }
+
+  .contacts__button--open::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 7px;
+    width: 1px;
+    height: 15px;
+    background-color: $color-default-white;
   }
 }

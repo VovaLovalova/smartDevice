@@ -115,6 +115,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
   modalOpenButton.addEventListener('click', onOpenModalButtonClick);
 
+  // ТАБЫ В МОБИЛЬНОМ ФУТЕРЕ
+
+  let navigationButton = document.querySelector('.navigation__button');
+  let contactsButton = document.querySelector('.contacts__button');
+  let navigation = document.querySelector('.navigation__list');
+  let contacts = document.querySelector('.contacts__container');
+
+  let onNavButtonClick = function () {
+    navigation.classList.toggle('navigation__list--close');
+    navigationButton.classList.toggle('navigation__button--open');
+    if (!contacts.classList.contains('contacts__container--close')) {
+      contacts.classList.add('contacts__container--close');
+      contactsButton.classList.add('contacts__button--open');
+    }
+  };
+
+  let onContactsButtonClick = function () {
+    contacts.classList.toggle('contacts__container--close');
+    contactsButton.classList.toggle('contacts__button--open');
+    if (!navigation.classList.contains('navigation__list--close')) {
+      navigation.classList.add('navigation__list--close');
+      navigationButton.classList.add('navigation__button--open');
+    }
+  };
+
+  navigationButton.addEventListener('click', onNavButtonClick);
+  contactsButton.addEventListener('click', onContactsButtonClick);
+
   // Utils
   // ---------------------------------
 
