@@ -46,7 +46,8 @@
   color: $color-transparent;
 }
 
-.navigation__link:hover, .navigation__link:focus {
+.navigation__link:hover,
+.navigation__link:focus {
   color: $color-deep-sky-blue;
 }
 
@@ -115,7 +116,7 @@
   }
 
   .navigation__button::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 7px;
     left: 0;
@@ -125,7 +126,7 @@
   }
 
   .navigation__button--open::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 7px;

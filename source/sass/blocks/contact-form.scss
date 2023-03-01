@@ -173,7 +173,7 @@
   left: -25px;
 }
 
-.contact-form__agreement:checked+.contact-form__agreement-label::after {
+.contact-form__agreement:checked + .contact-form__agreement-label::after {
   background-image: url("../../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -269,6 +269,7 @@
 @media (max-width: 767px) {
   .contact-form {
     min-height: 750px;
+    height: 580px;
   }
 
   .contact-form__container {
@@ -339,9 +340,5 @@
   .contact-form__agreement-label::before {
     top: 8px;
     left: -26px;
-  }
-
-  .contact-form {
-    height: 580px;
   }
 }

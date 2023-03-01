@@ -60,7 +60,6 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: blue;
 }
 
 a {
@@ -343,7 +342,7 @@ button,
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
-  letter-spacing: 0.085em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #f2f5f7;
   margin: 0;
@@ -368,7 +367,7 @@ button,
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  letter-spacing: 0.065em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #f2f5f7;
   padding: 15px 25px;
@@ -645,7 +644,7 @@ button,
   left: 289px;
   top: 590px;
   background-color: #00b2ff;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
   background-image: url("../../img/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1323,7 +1322,7 @@ button,
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 14px;
 }
 
@@ -1542,9 +1541,6 @@ button,
 
   .advantages-card__title {
     margin-bottom: 6px;
-  }
-
-  .advantages-card__title {
     font-size: 20px;
   }
 
@@ -1674,6 +1670,7 @@ button,
 
   .contact-form {
     min-height: 750px;
+    height: 580px;
   }
 
   .contact-form__container {
@@ -1752,10 +1749,6 @@ button,
   .contact-form__agreement-label::before {
     top: 8px;
     left: -26px;
-  }
-
-  .contact-form {
-    height: 580px;
   }
 
   .social {
@@ -1968,7 +1961,7 @@ button,
   .title__title {
     font-size: 64px;
     line-height: 75px;
-    letter-spacing: 0.085em;
+    letter-spacing: 0.09em;
     margin-bottom: 4px;
   }
 

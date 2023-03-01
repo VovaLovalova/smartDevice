@@ -118,7 +118,7 @@
 }
 
 .modal__label::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -25px;
@@ -130,13 +130,13 @@
 }
 
 .modal__checkbox:checked + .modal__label::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -25px;
   width: 15px;
   height: 15px;
-  background-image: url('../../img/check-mark.svg');
+  background-image: url("../../img/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -153,7 +153,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $color-default-white;
   margin-bottom: 14px;
 }
 
@@ -164,7 +164,7 @@
   width: 40px;
   height: 40px;
   background-color: transparent;
-  background-image: url('../../img/close.svg');
+  background-image: url("../../img/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;

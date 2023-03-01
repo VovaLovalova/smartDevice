@@ -1,6 +1,6 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
-import { Form } from './modules/form-validate/form';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
+import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
 
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let modal = document.querySelector('.modal');
   let modalOpenButton = document.querySelector('.header__button');
   let modalCloseButton = document.querySelector('.modal__close-button');
-  let form = document.querySelector('.modal__form');
+  let modalForm = document.querySelector('.modal__form');
   let nameInput = document.querySelector('#modal-input-name');
 
   let onCloseModalButtonClick = function () {
@@ -110,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     modalCloseButton.addEventListener('click', onCloseModalButtonClick);
     document.addEventListener('keydown', onEscKeydown);
-    form.addEventListener('submit', onSubmitForm);
+    modalForm.addEventListener('submit', onSubmitForm);
   };
 
   modalOpenButton.addEventListener('click', onOpenModalButtonClick);
