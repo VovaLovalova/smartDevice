@@ -460,7 +460,7 @@ button,
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 22px;
   color: #041827;
   margin: 0;
 }
@@ -684,6 +684,10 @@ button,
   line-height: 30px;
   color: #ffffff;
   margin: 0;
+}
+
+.goods-card__title--tablet {
+  display: none;
 }
 
 .contact-form {
@@ -1386,86 +1390,6 @@ button,
   }
 */
 
-@media (max-width: 768px) {
-  .title {
-    min-height: 560px;
-    margin-top: 0;
-    background-image: url("../../img/main-bg-mobile.png");
-  }
-
-  .title__container {
-    width: 320px;
-    padding: 149px 25px 70px;
-  }
-
-  .title__title {
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: 0.07em;
-    margin-bottom: 9px;
-  }
-
-  .title__text {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 44px;
-  }
-
-  .title__text-br {
-    display: none;
-  }
-
-  .title__button--big {
-    display: none;
-  }
-
-  .title__button--small {
-    display: inline;
-  }
-
-  .title__button {
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    width: auto;
-    display: block;
-    padding: 12px 25px;
-  }
-
-  .advantages-card {
-    width: 270px;
-    height: 340px;
-    padding: 30px;
-  }
-
-  .advantages-card:nth-child(3) {
-    height: 325px;
-  }
-
-  .advantages-card:nth-child(4) {
-    height: 325px;
-  }
-
-  .advantages-card__image {
-    margin-bottom: 6px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .advantages-card__title {
-    margin-bottom: 6px;
-  }
-
-  .advantages-card__title {
-    font-size: 20px;
-  }
-
-  .advantages-card__text {
-    font-size: 14px;
-    line-height: 19px;
-  }
-}
-
 @media (max-width: 767px) {
   .logo {
     margin-right: 133px;
@@ -1536,6 +1460,51 @@ button,
     display: none;
   }
 
+  .title {
+    min-height: 560px;
+    margin-top: 0;
+    background-image: url("../../img/main-bg-mobile.png");
+  }
+
+  .title__container {
+    width: 320px;
+    padding: 149px 25px 70px;
+  }
+
+  .title__title {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.07em;
+    margin-bottom: 9px;
+  }
+
+  .title__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 44px;
+  }
+
+  .title__text-br {
+    display: none;
+  }
+
+  .title__button--big {
+    display: none;
+  }
+
+  .title__button--small {
+    display: inline;
+  }
+
+  .title__button {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    width: auto;
+    display: block;
+    padding: 12px 25px;
+  }
+
   .advantages {
     min-height: 1420px;
   }
@@ -1549,6 +1518,39 @@ button,
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
     margin: 0;
+  }
+
+  .advantages-card {
+    width: 270px;
+    height: 340px;
+    padding: 30px;
+  }
+
+  .advantages-card:nth-child(3) {
+    height: 325px;
+  }
+
+  .advantages-card:nth-child(4) {
+    height: 325px;
+  }
+
+  .advantages-card__image {
+    margin-bottom: 6px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantages-card__title {
+    margin-bottom: 6px;
+  }
+
+  .advantages-card__title {
+    font-size: 20px;
+  }
+
+  .advantages-card__text {
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .about-company {
@@ -1629,6 +1631,14 @@ button,
   .goods-card {
     width: 270px;
     height: 250px;
+  }
+
+  .goods-card__title--tablet {
+    display: block;
+  }
+
+  .goods-card__title--desktop {
+    display: none;
   }
 
   .goods-card::before {
@@ -2018,10 +2028,11 @@ button,
 
   .about-company__text-container {
     margin-left: 175px;
+    margin-bottom: 16px;
   }
 
   .about-company__text-container--close {
-    height: 255px;
+    height: 260px;
   }
 
   .about-company__button {
@@ -2050,6 +2061,14 @@ button,
   .goods-card {
     width: 670px;
     height: 250px;
+  }
+
+  .goods-card__title--tablet {
+    display: block;
+  }
+
+  .goods-card__title--desktop {
+    display: none;
   }
 
   .goods-card::before {

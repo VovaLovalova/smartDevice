@@ -55,11 +55,23 @@
   margin: 0;
 }
 
+.goods-card__title--tablet {
+  display: none;
+}
+
 
 @media (max-width: 1023px) and (min-width: 768px) {
   .goods-card {
     width: 670px;
     height: 250px;
+  }
+
+  .goods-card__title--tablet {
+    display: block;
+  }
+
+  .goods-card__title--desktop {
+    display: none;
   }
 
   .goods-card::before {
@@ -92,6 +104,14 @@
   .goods-card {
     width: 270px;
     height: 250px;
+  }
+
+  .goods-card__title--tablet {
+    display: block;
+  }
+
+  .goods-card__title--desktop {
+    display: none;
   }
 
   .goods-card::before {
