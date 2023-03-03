@@ -771,7 +771,7 @@ button,
   margin-left: 5px;
 }
 
-.contact-form__title {
+.contact-form__form h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -782,7 +782,7 @@ button,
   margin-bottom: 12px;
 }
 
-.contact-form__text {
+.contact-form__form p {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -794,22 +794,22 @@ button,
   margin-left: 5px;
 }
 
-.contact-form__name,
-.contact-form__phone {
+.contact-form__form input[type=text],
+.contact-form__form input[type=tel] {
   width: 275px;
   height: 50px;
   padding: 15px;
 }
 
-.contact-form__question {
+.contact-form__form textarea {
   width: 580px;
   height: 155px;
   padding: 25px 15px;
 }
 
-.contact-form__name,
-.contact-form__phone,
-.contact-form__question {
+.contact-form__form input[type=text],
+.contact-form__form input[type=tel],
+.contact-form__form textarea {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -821,23 +821,19 @@ button,
   border-radius: 3px;
 }
 
-.contact-form__name:hover,
-.contact-form__phone:hover,
-.contact-form__question:hover {
+.contact-form__form input[type=text]:hover,
+.contact-form__form input[type=tel]:hover,
+.contact-form__form textarea:hover,
+.contact-form__form input[type=text]:active,
+.contact-form__form input[type=tel]:active,
+.contact-form__form textarea:active {
   border: 1px solid #ffffff;
   outline: none;
 }
 
-.contact-form__name:active,
-.contact-form__phone:active,
-.contact-form__question:active {
-  border: 1px solid #ffffff;
-  outline: none;
-}
-
-.contact-form__name::-webkit-input-placeholder,
-.contact-form__phone::-webkit-input-placeholder,
-.contact-form__question::-webkit-input-placeholder {
+.contact-form__form input[type=text]::-webkit-input-placeholder,
+.contact-form__form input[type=tel]::-webkit-input-placeholder,
+.contact-form__form textarea::-webkit-input-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -846,9 +842,9 @@ button,
   color: #ffffff;
 }
 
-.contact-form__name::-moz-placeholder,
-.contact-form__phone::-moz-placeholder,
-.contact-form__question::-moz-placeholder {
+.contact-form__form input[type=text]::-moz-placeholder,
+.contact-form__form input[type=tel]::-moz-placeholder,
+.contact-form__form textarea::-moz-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -857,9 +853,9 @@ button,
   color: #ffffff;
 }
 
-.contact-form__name:-ms-input-placeholder,
-.contact-form__phone:-ms-input-placeholder,
-.contact-form__question:-ms-input-placeholder {
+.contact-form__form input[type=text]:-ms-input-placeholder,
+.contact-form__form input[type=tel]:-ms-input-placeholder,
+.contact-form__form textarea:-ms-input-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -868,9 +864,9 @@ button,
   color: #ffffff;
 }
 
-.contact-form__name::-ms-input-placeholder,
-.contact-form__phone::-ms-input-placeholder,
-.contact-form__question::-ms-input-placeholder {
+.contact-form__form input[type=text]::-ms-input-placeholder,
+.contact-form__form input[type=tel]::-ms-input-placeholder,
+.contact-form__form textarea::-ms-input-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -879,9 +875,9 @@ button,
   color: #ffffff;
 }
 
-.contact-form__name::placeholder,
-.contact-form__phone::placeholder,
-.contact-form__question::placeholder {
+.contact-form__form input[type=text]::placeholder,
+.contact-form__form input[type=tel]::placeholder,
+.contact-form__form textarea::placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -890,11 +886,11 @@ button,
   color: #ffffff;
 }
 
-.contact-form__agreement {
+.contact-form__form input[type=checkbox] {
   display: none;
 }
 
-.contact-form__agreement-label {
+.contact-form__form label[for=input-agreement] {
   width: 235px;
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
@@ -908,7 +904,7 @@ button,
   margin-top: 15px;
 }
 
-.contact-form__agreement-label::before {
+label[for=input-agreement]::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -920,7 +916,7 @@ button,
   left: -25px;
 }
 
-.contact-form__agreement-label::after {
+label[for=input-agreement]::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -930,7 +926,7 @@ button,
   left: -25px;
 }
 
-.contact-form__agreement:checked + .contact-form__agreement-label::after {
+.contact-form__form input[type=checkbox]:checked + label[for=input-agreement]::after {
   background-image: url("../../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1158,7 +1154,7 @@ button,
   padding: 36px 40px;
 }
 
-.modal__title {
+.modal__window h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1169,7 +1165,7 @@ button,
   margin-bottom: 5px;
 }
 
-.modal__text {
+.modal__window p {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1180,7 +1176,8 @@ button,
   margin-bottom: 38px;
 }
 
-.modal__input {
+.modal__form input[type=text],
+.modal__form input[type=tel] {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1196,7 +1193,7 @@ button,
   margin-bottom: 20px;
 }
 
-.modal__textarea {
+.modal__form textarea {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1212,8 +1209,9 @@ button,
   margin-bottom: 20px;
 }
 
-.modal__input::-webkit-input-placeholder,
-.modal__textarea::-webkit-input-placeholder {
+.modal__form input[type=text]::-webkit-input-placeholder,
+.modal__form input[type=tel]::-webkit-input-placeholder,
+.modal__form textarea::-webkit-input-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1222,8 +1220,9 @@ button,
   color: #ffffff;
 }
 
-.modal__input::-moz-placeholder,
-.modal__textarea::-moz-placeholder {
+.modal__form input[type=text]::-moz-placeholder,
+.modal__form input[type=tel]::-moz-placeholder,
+.modal__form textarea::-moz-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1232,8 +1231,9 @@ button,
   color: #ffffff;
 }
 
-.modal__input:-ms-input-placeholder,
-.modal__textarea:-ms-input-placeholder {
+.modal__form input[type=text]:-ms-input-placeholder,
+.modal__form input[type=tel]:-ms-input-placeholder,
+.modal__form textarea:-ms-input-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1242,8 +1242,9 @@ button,
   color: #ffffff;
 }
 
-.modal__input::-ms-input-placeholder,
-.modal__textarea::-ms-input-placeholder {
+.modal__form input[type=text]::-ms-input-placeholder,
+.modal__form input[type=tel]::-ms-input-placeholder,
+.modal__form textarea::-ms-input-placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1252,8 +1253,9 @@ button,
   color: #ffffff;
 }
 
-.modal__input::placeholder,
-.modal__textarea::placeholder {
+.modal__form input[type=text]::placeholder,
+.modal__form input[type=tel]::placeholder,
+.modal__form textarea::placeholder {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1262,23 +1264,21 @@ button,
   color: #ffffff;
 }
 
-.modal__input:hover,
-.modal__textarea:hover {
+.modal__form input[type=text]:hover,
+.modal__form input[type=tel]:hover,
+.modal__form textarea:hover,
+.modal__form input[type=text]:active,
+.modal__form input[type=tel]:active,
+.modal__form textarea:active {
   border: 1px solid #ffffff;
   outline: none;
 }
 
-.modal__input:active,
-.modal__textarea:active {
-  border: 1px solid #ffffff;
-  outline: none;
-}
-
-.modal__checkbox {
+.modal__form input[type=checkbox] {
   display: none;
 }
 
-.modal__label {
+label[for=modal-checkbox] {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1290,7 +1290,7 @@ button,
   position: relative;
 }
 
-.modal__label::before {
+label[for=modal-checkbox]::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1302,7 +1302,7 @@ button,
   border-radius: 2px;
 }
 
-.modal__checkbox:checked + .modal__label::after {
+.modal__form input[type=checkbox]:checked + label[for=modal-checkbox]::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -1694,25 +1694,25 @@ button,
     display: none;
   }
 
-  .contact-form__title {
+  .contact-form__form h2 {
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 9px;
   }
 
-  .contact-form__text {
+  .contact-form__form p {
     font-size: 14px;
     line-height: 19px;
     margin-left: 0;
     margin-bottom: 32px;
   }
 
-  .contact-form__name,
-  .contact-form__phone {
+  .contact-form__form input[type=text],
+  .contact-form__form input[type=tel] {
     width: 270px;
   }
 
-  .contact-form__question {
+  .contact-form__form textarea {
     width: 270px;
     padding-top: 24px;
     height: 180px;
@@ -1744,13 +1744,13 @@ button,
     padding: 13px 25px;
   }
 
-  .contact-form__agreement-label {
+  label[for=input-agreement] {
     margin-left: 31px;
     margin-top: 23px;
   }
 
-  .contact-form__agreement-label::after,
-  .contact-form__agreement-label::before {
+  label[for=input-agreement]::after,
+  label[for=input-agreement]::before {
     top: 8px;
     left: -26px;
   }
@@ -2114,21 +2114,21 @@ button,
     display: none;
   }
 
-  .contact-form__title {
+  .contact-form__form h2 {
     margin-bottom: 7px;
   }
 
-  .contact-form__text {
+  .contact-form__form p {
     margin-left: 0;
     margin-bottom: 24px;
   }
 
-  .contact-form__name,
-  .contact-form__phone {
+  .contact-form__form input[type=text],
+  .contact-form__form input[type=tel] {
     width: 320px;
   }
 
-  .contact-form__question {
+  .contact-form__form textarea {
     width: 670px;
     padding-top: 30px;
   }
@@ -2152,7 +2152,7 @@ button,
     padding: 15px 25px 13px;
   }
 
-  .contact-form__agreement-label {
+  label[for=input-agreement] {
     margin-top: 10px;
   }
 

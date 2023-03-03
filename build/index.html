@@ -238,22 +238,22 @@
       <div class="main__block contact-form" id="contact-form">
         <div class="contact-form__container">
           <form class="contact-form__form" action="#" method="post" name="customer question form">
-            <h2 class="contact-form__title">Остались вопросы? Задайте их нам!</h2>
-            <p class="contact-form__text">Мы проконсультируем Вас бесплатно</p>
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
             <div class="contact-form__input-container">
               <label class="visually-hidden" for="input-name">Имя клиента</label>
-              <input class="contact-form__name" type="text" name="name" placeholder="Имя" id="input-name" required>
+              <input type="text" name="name" placeholder="Имя" id="input-name" required>
               <label class="visually-hidden" for="input-phone">Номер телефона клиента</label>
-              <input class="contact-form__phone" type="tel" name="phone number" placeholder="Телефон" id="input-phone"
+              <input type="tel" name="phone number" placeholder="Телефон" id="input-phone"
                 required>
               <label class="visually-hidden" for="question">Вопрос клиента</label>
-              <textarea class="contact-form__question" name="question" placeholder="Ваш вопрос"
+              <textarea name="question" placeholder="Ваш вопрос"
                 id="question"></textarea>
             </div>
             <div class="contact-form__confirm-container">
-              <input class="contact-form__agreement" type="checkbox" name="agreement" id="input-agreement" value="agree"
+              <input type="checkbox" name="agreement" id="input-agreement" value="agree"
                 required>
-              <label class="contact-form__agreement-label" for="input-agreement">Я согласен на обработку персональных
+              <label for="input-agreement">Я согласен на обработку персональных
                 данных</label>
               <button class="contact-form__button" type="submit">Задать вопрос</button>
             </div>
@@ -366,18 +366,18 @@
 
   <div class="modal modal--close">
     <div class="modal__window">
-      <h2 class="modal__title">Закажите звонок</h2>
-      <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="modal__form" action="#">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="modal__form" action="#" method="post" name="customer question form">
         <label class="visually-hidden" for="modal-input-name">Имя</label>
-        <input class="modal__input" id="modal-input-name" type="text" name="name" placeholder="Имя" required>
+        <input id="modal-input-name" type="text" name="name" placeholder="Имя" required>
         <label class="visually-hidden" for="modal-input-phone">Телефон</label>
-        <input class="modal__input" id="modal-input-phone" type="tel" name="phone" placeholder="Телефон" required>
+        <input id="modal-input-phone" type="tel" name="phone" placeholder="Телефон" required>
         <label class="visually-hidden" for="modal-input-question">Вопрос клиента</label>
-        <textarea class="modal__textarea" id="modal-input-question" name="question" placeholder="Ваш вопрос"></textarea>
+        <textarea id="modal-input-question" name="question" placeholder="Ваш вопрос"></textarea>
         <button class="modal__form-button">Отправить</button>
-        <input class="modal__checkbox" id="modal-checkbox" type="checkbox" name="consent" required>
-        <label class="modal__label" for="modal-checkbox">Я согласен на обработку персональных данных</label>
+        <input id="modal-checkbox" type="checkbox" name="consent" required>
+        <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
       </form>
       <button class="modal__close-button"><span class="visually-hidden">Закрыть</span></button>
     </div>

@@ -25,7 +25,7 @@
   padding: 36px 40px;
 }
 
-.modal__title {
+.modal__window h2 {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 400;
@@ -36,7 +36,7 @@
   margin-bottom: 5px;
 }
 
-.modal__text {
+.modal__window p {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -47,7 +47,8 @@
   margin-bottom: 38px;
 }
 
-.modal__input {
+.modal__form input[type="text"],
+.modal__form input[type="tel"] {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -63,7 +64,7 @@
   margin-bottom: 20px;
 }
 
-.modal__textarea {
+.modal__form textarea {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -79,8 +80,9 @@
   margin-bottom: 20px;
 }
 
-.modal__input::placeholder,
-.modal__textarea::placeholder {
+.modal__form input[type="text"]::placeholder,
+.modal__form input[type="tel"]::placeholder,
+.modal__form textarea::placeholder {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -89,23 +91,22 @@
   color: $color-default-white;
 }
 
-.modal__input:hover,
-.modal__textarea:hover {
+
+.modal__form input[type="text"]:hover,
+.modal__form input[type="tel"]:hover,
+.modal__form textarea:hover,
+.modal__form input[type="text"]:active,
+.modal__form input[type="tel"]:active,
+.modal__form textarea:active {
   border: 1px solid $color-default-white;
   outline: none;
 }
 
-.modal__input:active,
-.modal__textarea:active {
-  border: 1px solid $color-default-white;
-  outline: none;
-}
-
-.modal__checkbox {
+.modal__form input[type="checkbox"] {
   display: none;
 }
 
-.modal__label {
+label[for="modal-checkbox"] {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -117,7 +118,7 @@
   position: relative;
 }
 
-.modal__label::before {
+label[for="modal-checkbox"]::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -129,7 +130,7 @@
   border-radius: 2px;
 }
 
-.modal__checkbox:checked + .modal__label::after {
+.modal__form input[type="checkbox"]:checked + label[for="modal-checkbox"]::after {
   content: "";
   position: absolute;
   top: -2px;

@@ -58,7 +58,7 @@
   margin-left: 5px;
 }
 
-.contact-form__title {
+.contact-form__form h2 {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 400;
@@ -69,7 +69,7 @@
   margin-bottom: 12px;
 }
 
-.contact-form__text {
+.contact-form__form p {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -81,22 +81,22 @@
   margin-left: 5px;
 }
 
-.contact-form__name,
-.contact-form__phone {
+.contact-form__form input[type="text"],
+.contact-form__form input[type="tel"] {
   width: 275px;
   height: 50px;
   padding: 15px;
 }
 
-.contact-form__question {
+.contact-form__form textarea {
   width: 580px;
   height: 155px;
   padding: 25px 15px;
 }
 
-.contact-form__name,
-.contact-form__phone,
-.contact-form__question {
+.contact-form__form input[type="text"],
+.contact-form__form input[type="tel"],
+.contact-form__form textarea {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -108,23 +108,19 @@
   border-radius: 3px;
 }
 
-.contact-form__name:hover,
-.contact-form__phone:hover,
-.contact-form__question:hover {
+.contact-form__form input[type="text"]:hover,
+.contact-form__form input[type="tel"]:hover,
+.contact-form__form textarea:hover,
+.contact-form__form input[type="text"]:active,
+.contact-form__form input[type="tel"]:active,
+.contact-form__form textarea:active {
   border: 1px solid $color-default-white;
   outline: none;
 }
 
-.contact-form__name:active,
-.contact-form__phone:active,
-.contact-form__question:active {
-  border: 1px solid $color-default-white;
-  outline: none;
-}
-
-.contact-form__name::placeholder,
-.contact-form__phone::placeholder,
-.contact-form__question::placeholder {
+.contact-form__form input[type="text"]::placeholder,
+.contact-form__form input[type="tel"]::placeholder,
+.contact-form__form textarea::placeholder {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -133,11 +129,11 @@
   color: $color-default-white;
 }
 
-.contact-form__agreement {
+.contact-form__form input[type="checkbox"] {
   display: none;
 }
 
-.contact-form__agreement-label {
+.contact-form__form label[for="input-agreement"] {
   width: 235px;
   font-family: $ff-ptmono;
   font-style: normal;
@@ -151,7 +147,7 @@
   margin-top: 15px;
 }
 
-.contact-form__agreement-label::before {
+label[for="input-agreement"]::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -163,7 +159,7 @@
   left: -25px;
 }
 
-.contact-form__agreement-label::after {
+label[for="input-agreement"]::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -173,7 +169,7 @@
   left: -25px;
 }
 
-.contact-form__agreement:checked + .contact-form__agreement-label::after {
+.contact-form__form input[type="checkbox"]:checked+label[for="input-agreement"]::after {
   background-image: url("../../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -226,21 +222,21 @@
     display: none;
   }
 
-  .contact-form__title {
+  .contact-form__form h2 {
     margin-bottom: 7px;
   }
 
-  .contact-form__text {
+  .contact-form__form p {
     margin-left: 0;
     margin-bottom: 24px;
   }
 
-  .contact-form__name,
-  .contact-form__phone {
+  .contact-form__form input[type="text"],
+  .contact-form__form input[type="tel"] {
     width: 320px;
   }
 
-  .contact-form__question {
+  .contact-form__form textarea {
     width: 670px;
     padding-top: 30px;
   }
@@ -261,7 +257,7 @@
     padding: 15px 25px 13px;
   }
 
-  .contact-form__agreement-label {
+  label[for="input-agreement"] {
     margin-top: 10px;
   }
 }
@@ -289,25 +285,25 @@
     display: none;
   }
 
-  .contact-form__title {
+  .contact-form__form h2 {
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 9px;
   }
 
-  .contact-form__text {
+  .contact-form__form p {
     font-size: 14px;
     line-height: 19px;
     margin-left: 0;
     margin-bottom: 32px;
   }
 
-  .contact-form__name,
-  .contact-form__phone {
+  .contact-form__form input[type="text"],
+  .contact-form__form input[type="tel"] {
     width: 270px;
   }
 
-  .contact-form__question {
+  .contact-form__form textarea {
     width: 270px;
     padding-top: 24px;
     height: 180px;
@@ -331,13 +327,13 @@
     padding: 13px 25px;
   }
 
-  .contact-form__agreement-label {
+  label[for="input-agreement"] {
     margin-left: 31px;
     margin-top: 23px;
   }
 
-  .contact-form__agreement-label::after,
-  .contact-form__agreement-label::before {
+  label[for="input-agreement"]::after,
+  label[for="input-agreement"]::before {
     top: 8px;
     left: -26px;
   }
