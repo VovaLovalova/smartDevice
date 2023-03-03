@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let modal = document.querySelector('.modal');
   let modalOpenButton = document.querySelector('.header__button');
-  let modalCloseButton = document.querySelector('.modal__close-button');
+  let modalCloseButton = document.querySelector('#modal-close-button');
   let modalForm = document.querySelector('.modal__form');
   let nameInput = document.querySelector('#modal-input-name');
 

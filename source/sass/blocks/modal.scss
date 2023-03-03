@@ -142,7 +142,7 @@ label[for="modal-checkbox"]::before {
   background-position: center;
 }
 
-.modal__form-button {
+.modal__window button[type="submit"] {
   width: 100%;
   height: 45px;
   background: $color-black-pearl;
@@ -158,7 +158,7 @@ label[for="modal-checkbox"]::before {
   margin-bottom: 14px;
 }
 
-.modal__close-button {
+.modal__window button[type="reset"] {
   position: absolute;
   top: 15px;
   left: 445px;
@@ -172,10 +172,10 @@ label[for="modal-checkbox"]::before {
   cursor: pointer;
 }
 
-.modal__close-button:hover,
-.modal__close-button:focus,
-.modal__form-button:hover,
-.modal__form-button:focus {
+.modal__window button[type="reset"]:hover,
+.modal__window button[type="reset"]:focus,
+.modal__window button[type="submit"]:hover,
+.modal__window button[type="submit"]:focus {
   border: 2px solid $color-default-white;
   border-radius: 3px;
 }

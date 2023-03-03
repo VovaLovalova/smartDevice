@@ -175,7 +175,7 @@ label[for="input-agreement"]::after {
   background-repeat: no-repeat;
 }
 
-.contact-form__button {
+.contact-form__form button[type="submit"] {
   width: 265px;
   margin-right: 50px;
   font-family: $ff-roboto-condensed;
@@ -194,8 +194,8 @@ label[for="input-agreement"]::after {
   border: none;
 }
 
-.contact-form__button:hover,
-.contact-form__button:focus {
+.contact-form__form button[type="submit"]:hover,
+.contact-form__form button[type="submit"]:focus {
   background-color: $color-cerulean-dark;
   border: none;
 }
@@ -252,7 +252,7 @@ label[for="input-agreement"]::after {
     margin-left: 0;
   }
 
-  .contact-form__button {
+  .contact-form__form button[type="submit"] {
     margin-right: 85px;
     padding: 15px 25px 13px;
   }
@@ -322,7 +322,7 @@ label[for="input-agreement"]::after {
     margin-left: 0;
   }
 
-  .contact-form__button {
+  .contact-form__form button[type="submit"] {
     width: 100%;
     padding: 13px 25px;
   }

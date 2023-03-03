@@ -932,7 +932,7 @@ label[for=input-agreement]::after {
   background-repeat: no-repeat;
 }
 
-.contact-form__button {
+.contact-form__form button[type=submit] {
   width: 265px;
   margin-right: 50px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -951,8 +951,8 @@ label[for=input-agreement]::after {
   border: none;
 }
 
-.contact-form__button:hover,
-.contact-form__button:focus {
+.contact-form__form button[type=submit]:hover,
+.contact-form__form button[type=submit]:focus {
   background-color: #026592;
   border: none;
 }
@@ -1314,7 +1314,7 @@ label[for=modal-checkbox]::before {
   background-position: center;
 }
 
-.modal__form-button {
+.modal__window button[type=submit] {
   width: 100%;
   height: 45px;
   background: #041827;
@@ -1330,7 +1330,7 @@ label[for=modal-checkbox]::before {
   margin-bottom: 14px;
 }
 
-.modal__close-button {
+.modal__window button[type=reset] {
   position: absolute;
   top: 15px;
   left: 445px;
@@ -1344,10 +1344,10 @@ label[for=modal-checkbox]::before {
   cursor: pointer;
 }
 
-.modal__close-button:hover,
-.modal__close-button:focus,
-.modal__form-button:hover,
-.modal__form-button:focus {
+.modal__window button[type=reset]:hover,
+.modal__window button[type=reset]:focus,
+.modal__window button[type=submit]:hover,
+.modal__window button[type=submit]:focus {
   border: 2px solid #ffffff;
   border-radius: 3px;
 }
@@ -1739,7 +1739,7 @@ label[for=modal-checkbox]::before {
     margin-left: 0;
   }
 
-  .contact-form__button {
+  .contact-form__form button[type=submit] {
     width: 100%;
     padding: 13px 25px;
   }
@@ -2147,7 +2147,7 @@ label[for=modal-checkbox]::before {
     margin-left: 0;
   }
 
-  .contact-form__button {
+  .contact-form__form button[type=submit] {
     margin-right: 85px;
     padding: 15px 25px 13px;
   }

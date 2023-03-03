@@ -255,7 +255,7 @@
                 required>
               <label for="input-agreement">Я согласен на обработку персональных
                 данных</label>
-              <button class="contact-form__button" type="submit">Задать вопрос</button>
+              <button type="submit" value="submit">Задать вопрос</button>
             </div>
           </form>
           <picture>
@@ -375,11 +375,11 @@
         <input id="modal-input-phone" type="tel" name="phone" placeholder="Телефон" required>
         <label class="visually-hidden" for="modal-input-question">Вопрос клиента</label>
         <textarea id="modal-input-question" name="question" placeholder="Ваш вопрос"></textarea>
-        <button class="modal__form-button">Отправить</button>
+        <button id="modal-form-button" type="submit" value="submit">Отправить</button>
         <input id="modal-checkbox" type="checkbox" name="consent" required>
         <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
       </form>
-      <button class="modal__close-button"><span class="visually-hidden">Закрыть</span></button>
+      <button id="modal-close-button" type="reset"><span class="visually-hidden">Закрыть</span></button>
     </div>
   </div>
 
