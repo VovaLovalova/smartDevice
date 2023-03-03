@@ -36,6 +36,10 @@
   column-gap: 85px;
 }
 
+.goods__item {
+  background-color: $color-deep-sky-blue;
+}
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .goods {
     height: 1080px;

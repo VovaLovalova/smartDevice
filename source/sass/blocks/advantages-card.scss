@@ -83,14 +83,14 @@
   .advantages-card {
     width: 270px;
     height: 340px;
-    padding: 30px;
+    padding: 30px 30px 35px;
   }
 
-  .advantages-card:nth-child(3) {
+  .advantages-card:nth-child(3n) {
     height: 325px;
   }
 
-  .advantages-card:nth-child(4) {
+  .advantages-card:nth-child(4n) {
     height: 325px;
   }
 

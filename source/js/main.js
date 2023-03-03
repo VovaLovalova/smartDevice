@@ -9,58 +9,61 @@ window.addEventListener('DOMContentLoaded', () => {
   //  МАСКА ДЛЯ ВВОДА НОМЕРА ТЕЛЕФОНА
   let phoneInput = document.querySelectorAll('input[type=tel]');
 
-  let getInputNumbersValue = function (input) {
-    return input.value.replace(/\D/g, '');
-  };
+  if (phoneInput) {
+    let getInputNumbersValue = function (input) {
+      return input.value.replace(/\D/g, '');
+    };
 
-  let onPhoneInput = function (e) {
-    let input = e.target;
-    let inputNumbersValue = getInputNumbersValue(input);
-    let formatedInputValue = '';
+    let onPhoneInput = function (e) {
+      let input = e.target;
+      let inputNumbersValue = getInputNumbersValue(input);
+      let formatedInputValue = '';
 
-    if (!inputNumbersValue) {
-      input.value = '';
+      if (!inputNumbersValue) {
+        input.value = '';
+      }
+
+      if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
+        // russian number
+        if (inputNumbersValue[0] === '9') {
+          inputNumbersValue = '7' + inputNumbersValue;
+        }
+        let firstSymbols = '+7(';
+        formatedInputValue = firstSymbols;
+
+        if (inputNumbersValue.length > 1) {
+          formatedInputValue += inputNumbersValue.substring(1, 4);
+        }
+        if (inputNumbersValue.length >= 5) {
+          formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+        }
+        if (inputNumbersValue.length >= 8) {
+          formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
+        }
+        if (inputNumbersValue.length >= 10) {
+          formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
+        }
+      } else {
+        // not russian number
+        formatedInputValue = '+' + inputNumbersValue.substring(0, 16);
+      }
+
+      input.value = formatedInputValue;
+    };
+
+    let onPhonedelete = function (e) {
+      let input = e.target;
+      if (e.keyCode === 8 && getInputNumbersValue(input).length === 1) {
+        input.value = '';
+      }
+    };
+
+    for (let i = 0; i < phoneInput.length; i++) {
+      let input = phoneInput[i];
+      input.addEventListener('input', onPhoneInput);
+      input.addEventListener('keydown', onPhonedelete);
     }
 
-    if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
-      // russian number
-      if (inputNumbersValue[0] === '9') {
-        inputNumbersValue = '7' + inputNumbersValue;
-      }
-      let firstSymbols = '+7(';
-      formatedInputValue = firstSymbols;
-
-      if (inputNumbersValue.length > 1) {
-        formatedInputValue += inputNumbersValue.substring(1, 4);
-      }
-      if (inputNumbersValue.length >= 5) {
-        formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
-      }
-      if (inputNumbersValue.length >= 8) {
-        formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
-      }
-      if (inputNumbersValue.length >= 10) {
-        formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
-      }
-    } else {
-      // not russian number
-      formatedInputValue = '+' + inputNumbersValue.substring(0, 16);
-    }
-
-    input.value = formatedInputValue;
-  };
-
-  let onPhonedelete = function (e) {
-    let input = e.target;
-    if (e.keyCode === 8 && getInputNumbersValue(input).length === 1) {
-      input.value = '';
-    }
-  };
-
-  for (let i = 0; i < phoneInput.length; i++) {
-    let input = phoneInput[i];
-    input.addEventListener('input', onPhoneInput);
-    input.addEventListener('keydown', onPhonedelete);
   }
 
   // КНОПКА "ПОДРОБНЕЕ"
@@ -68,18 +71,21 @@ window.addEventListener('DOMContentLoaded', () => {
   let openButton = document.querySelector('.about-company__button');
   let textContainer = document.querySelector('.about-company__text-container');
 
-  let onOpenButtonClick = function (e) {
-    textContainer.classList.toggle('about-company__text-container--close');
-    textContainer.classList.toggle('about-company__text-container--open');
+  if (openButton && textContainer) {
+    let onOpenButtonClick = function (e) {
+      textContainer.classList.toggle('about-company__text-container--close');
+      textContainer.classList.toggle('about-company__text-container--open');
 
-    if (textContainer.classList.contains('about-company__text-container--open')) {
-      e.target.textContent = 'Свернуть';
-    } else {
-      e.target.textContent = 'Подробнее';
-    }
-  };
+      if (textContainer.classList.contains('about-company__text-container--open')) {
+        e.target.textContent = 'Свернуть';
+      } else {
+        e.target.textContent = 'Подробнее';
+      }
+    };
 
-  openButton.addEventListener('click', onOpenButtonClick);
+    openButton.addEventListener('click', onOpenButtonClick);
+  }
+
 
   // МОДАЛЬНОЕ ОКНО
 
@@ -89,31 +95,33 @@ window.addEventListener('DOMContentLoaded', () => {
   let modalForm = document.querySelector('.modal__form');
   let nameInput = document.querySelector('#modal-input-name');
 
-  let onCloseModalButtonClick = function () {
-    modal.classList.add('modal--close');
-  };
-
-  let onEscKeydown = function (e) {
-    if (e.keyCode === 27) {
+  if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput) {
+    let onCloseModalButtonClick = function () {
       modal.classList.add('modal--close');
-    }
-  };
+    };
 
-  let onSubmitForm = function () {
-    modal.classList.add('modal--close');
-  };
+    let onEscKeydown = function (e) {
+      if (e.keyCode === 27) {
+        modal.classList.add('modal--close');
+      }
+    };
 
-  let onOpenModalButtonClick = function () {
-    modal.classList.remove('modal--close');
+    let onSubmitForm = function () {
+      modal.classList.add('modal--close');
+    };
 
-    nameInput.focus();
+    let onOpenModalButtonClick = function () {
+      modal.classList.remove('modal--close');
 
-    modalCloseButton.addEventListener('click', onCloseModalButtonClick);
-    document.addEventListener('keydown', onEscKeydown);
-    modalForm.addEventListener('submit', onSubmitForm);
-  };
+      nameInput.focus();
 
-  modalOpenButton.addEventListener('click', onOpenModalButtonClick);
+      modalCloseButton.addEventListener('click', onCloseModalButtonClick);
+      document.addEventListener('keydown', onEscKeydown);
+      modalForm.addEventListener('submit', onSubmitForm);
+    };
+
+    modalOpenButton.addEventListener('click', onOpenModalButtonClick);
+  }
 
   // ТАБЫ В МОБИЛЬНОМ ФУТЕРЕ
 
@@ -122,26 +130,31 @@ window.addEventListener('DOMContentLoaded', () => {
   let navigation = document.querySelector('.navigation__list');
   let contacts = document.querySelector('.contacts__container');
 
-  let onNavButtonClick = function () {
-    navigation.classList.toggle('navigation__list--close');
-    navigationButton.classList.toggle('navigation__button--open');
-    if (!contacts.classList.contains('contacts__container--close')) {
-      contacts.classList.add('contacts__container--close');
-      contactsButton.classList.add('contacts__button--open');
-    }
-  };
+  if (navigationButton && navigation) {
+    let onNavButtonClick = function () {
+      navigation.classList.toggle('navigation__list--close');
+      navigationButton.classList.toggle('navigation__button--open');
+      if (!contacts.classList.contains('contacts__container--close')) {
+        contacts.classList.add('contacts__container--close');
+        contactsButton.classList.add('contacts__button--open');
+      }
+    };
 
-  let onContactsButtonClick = function () {
-    contacts.classList.toggle('contacts__container--close');
-    contactsButton.classList.toggle('contacts__button--open');
-    if (!navigation.classList.contains('navigation__list--close')) {
-      navigation.classList.add('navigation__list--close');
-      navigationButton.classList.add('navigation__button--open');
-    }
-  };
+    navigationButton.addEventListener('click', onNavButtonClick);
+  }
 
-  navigationButton.addEventListener('click', onNavButtonClick);
-  contactsButton.addEventListener('click', onContactsButtonClick);
+  if (contactsButton && contacts) {
+    let onContactsButtonClick = function () {
+      contacts.classList.toggle('contacts__container--close');
+      contactsButton.classList.toggle('contacts__button--open');
+      if (!navigation.classList.contains('navigation__list--close')) {
+        navigation.classList.add('navigation__list--close');
+        navigationButton.classList.add('navigation__button--open');
+      }
+    };
+
+    contactsButton.addEventListener('click', onContactsButtonClick);
+  }
 
   // Utils
   // ---------------------------------
