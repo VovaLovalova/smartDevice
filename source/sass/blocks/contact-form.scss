@@ -35,7 +35,7 @@
   border-right: 972px solid transparent;
 }
 
-.contact-form__image {
+.contact-form img {
   position: absolute;
   top: 246px;
   left: 350px;
@@ -169,7 +169,7 @@ label[for="input-agreement"]::after {
   left: -25px;
 }
 
-.contact-form__form input[type="checkbox"]:checked+label[for="input-agreement"]::after {
+.contact-form__form input[type="checkbox"]:checked + label[for="input-agreement"]::after {
   background-image: url("../../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -218,7 +218,7 @@ label[for="input-agreement"]::after {
     display: none;
   }
 
-  .contact-form__image {
+  .contact-form img {
     display: none;
   }
 
@@ -281,7 +281,7 @@ label[for="input-agreement"]::after {
     display: none;
   }
 
-  .contact-form__image {
+  .contact-form img {
     display: none;
   }
 

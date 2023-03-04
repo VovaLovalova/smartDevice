@@ -4,7 +4,7 @@
   left: 360px;
 }
 
-.social__list {
+.social ul {
   list-style-type: none;
   width: 150px;
   height: 40px;
@@ -14,12 +14,26 @@
   justify-content: space-between;
 }
 
-.social__link {
+.social a {
   fill: $color-alice-blue;
 }
 
-.social__link:hover {
+.social a:hover {
   fill: $color-deep-sky-blue;
+}
+
+.social h3,
+.social h4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {

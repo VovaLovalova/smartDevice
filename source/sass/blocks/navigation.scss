@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.navigation__title {
+.navigation h3 {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 400;
@@ -18,7 +18,7 @@
   margin-bottom: 21px;
 }
 
-.navigation__list {
+.navigation ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -28,16 +28,16 @@
   height: 150px;
 }
 
-.navigation__item {
+.navigation li {
   width: 249px;
   min-height: 20px;
 }
 
-.navigation__item:not(:nth-child(4)) {
+.navigation li:not(:nth-child(4n)) {
   margin-bottom: 5px;
 }
 
-.navigation__link {
+.navigation a {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -46,13 +46,26 @@
   color: $color-transparent;
 }
 
-.navigation__link:hover,
-.navigation__link:focus {
+.navigation a:hover,
+.navigation a:focus {
   color: $color-deep-sky-blue;
 }
 
-.navigation__button {
+.navigation button {
   display: none;
+}
+
+.navigation span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -62,11 +75,11 @@
     padding-top: 0;
   }
 
-  .navigation__list {
+  .navigation ul {
     height: 230px;
   }
 
-  .navigation__item:not(:last-child) {
+  .navigation li:not(:last-child) {
     margin-bottom: 5px;
   }
 }
@@ -80,30 +93,30 @@
     border-bottom: 1px solid $color-default-white;
   }
 
-  .navigation__title {
+  .navigation h3 {
     margin: 0;
   }
 
-  .navigation__list {
+  .navigation ul {
     min-height: 203px;
     margin-top: 10px;
     flex-wrap: nowrap;
   }
 
-  .navigation__list--close {
+  .navigation .navigation__list--close {
     display: none;
   }
 
-  .navigation__item:not(:last-child) {
+  .navigation li:not(:last-child) {
     margin-bottom: 5px;
   }
 
-  .navigation__link {
+  .navigation a {
     font-size: 14px;
     line-height: 19px;
   }
 
-  .navigation__button {
+  .navigation button {
     position: absolute;
     top: 20px;
     left: 279px;
@@ -115,7 +128,7 @@
     cursor: pointer;
   }
 
-  .navigation__button::before {
+  .navigation button::before {
     content: "";
     position: absolute;
     top: 7px;

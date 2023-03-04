@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // КНОПКА "ПОДРОБНЕЕ"
 
-  let openButton = document.querySelector('.about-company__button');
+  let openButton = document.querySelector('#about-company-button');
   let textContainer = document.querySelector('.about-company__text-container');
 
   if (openButton && textContainer) {
@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // МОДАЛЬНОЕ ОКНО
 
   let modal = document.querySelector('.modal');
-  let modalOpenButton = document.querySelector('.header__button');
+  let modalOpenButton = document.querySelector('#header-button');
   let modalCloseButton = document.querySelector('#modal-close-button');
   let modalForm = document.querySelector('.modal__form');
   let nameInput = document.querySelector('#modal-input-name');
@@ -125,10 +125,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // ТАБЫ В МОБИЛЬНОМ ФУТЕРЕ
 
-  let navigationButton = document.querySelector('.navigation__button');
-  let contactsButton = document.querySelector('.contacts__button');
-  let navigation = document.querySelector('.navigation__list');
-  let contacts = document.querySelector('.contacts__container');
+  let navigationButton = document.querySelector('#navigation-button');
+  let contactsButton = document.querySelector('#contacts-button');
+  let navigation = document.querySelector('#navigation-list');
+  let contacts = document.querySelector('#contacts-container');
+
+  navigationButton.classList.add('navigation__button--open');
+  contactsButton.classList.add('contacts__button--open');
+  navigation.classList.add('navigation__list--close');
+  contacts.classList.add('contacts__container--close');
 
   if (navigationButton && navigation) {
     let onNavButtonClick = function () {

@@ -236,11 +236,7 @@ button,
   width: 460px;
 }
 
-.header-contacts__image {
-  margin-right: 15px;
-}
-
-.header-contacts__link {
+.header-contacts a {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -253,6 +249,10 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.header-contacts svg {
+  margin-right: 15px;
 }
 
 .header {
@@ -287,7 +287,7 @@ button,
   padding-left: 350px;
 }
 
-.header__button {
+.header button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -305,7 +305,7 @@ button,
   width: 160px;
 }
 
-.header__button:hover {
+.header button:hover {
   color: #041827;
   background-color: #f2f5f7;
 }
@@ -336,7 +336,7 @@ button,
   padding: 301px 80px 80px 475px;
 }
 
-.title__title {
+.title h1 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -349,7 +349,7 @@ button,
   margin-bottom: 36px;
 }
 
-.title__text {
+.title p {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -360,7 +360,7 @@ button,
   margin-bottom: 62px;
 }
 
-.title__button {
+.title a {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -375,8 +375,8 @@ button,
   border-radius: 3px;
 }
 
-.title__button:hover,
-.title__button:focus {
+.title a:hover,
+.title a:focus {
   background-color: #0072a3;
 }
 
@@ -406,7 +406,21 @@ button,
   padding: 104px 350px 98px;
 }
 
-.advantages__list {
+.advantages h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.advantages ul {
   list-style-type: none;
   padding: 0;
   display: -ms-grid;
@@ -438,12 +452,12 @@ button,
   background-color: #00b2ff;
 }
 
-.advantages-card__image {
+.advantages-card svg {
   margin-bottom: 14px;
   fill: #00b2ff;
 }
 
-.advantages-card__title {
+.advantages-card h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -454,7 +468,7 @@ button,
   margin-bottom: 15px;
 }
 
-.advantages-card__text {
+.advantages-card p {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -469,18 +483,18 @@ button,
   background-color: #00b2ff;
 }
 
-.advantages-card:hover .advantages-card__title,
-.advantages-card:focus .advantages-card__title {
+.advantages-card:hover h3,
+.advantages-card:focus h3 {
   color: #ffffff;
 }
 
-.advantages-card:hover .advantages-card__text,
-.advantages-card:focus .advantages-card__text {
+.advantages-card:hover p,
+.advantages-card:focus p {
   color: #ffffff;
 }
 
-.advantages-card:hover .advantages-card__image,
-.advantages-card:focus .advantages-card__image {
+.advantages-card:hover svg,
+.advantages-card:focus svg {
   fill: #ffffff;
 }
 
@@ -507,7 +521,7 @@ button,
   position: relative;
 }
 
-.about-company__title {
+.about-company h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -533,7 +547,7 @@ button,
   height: auto;
 }
 
-.about-company__text {
+.about-company p {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -548,7 +562,7 @@ button,
   display: none;
 }
 
-.about-company__button {
+.about-company button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -567,12 +581,12 @@ button,
   cursor: pointer;
 }
 
-.about-company__button:hover {
+.about-company button:hover {
   color: #ffffff;
   background-color: #00b2ff;
 }
 
-.about-company__image {
+.about-company img {
   position: absolute;
   top: 6px;
   left: 350px;
@@ -600,7 +614,21 @@ button,
   padding: 66px 350px 125px;
 }
 
-.goods__text {
+.goods h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.goods p {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -615,7 +643,7 @@ button,
   display: none;
 }
 
-.goods__list {
+.goods ul {
   list-style-type: none;
   padding: 0;
   display: -ms-grid;
@@ -627,7 +655,7 @@ button,
   column-gap: 85px;
 }
 
-.goods__item {
+.goods li {
   background-color: #00b2ff;
 }
 
@@ -666,7 +694,7 @@ button,
   background-image: url("../../img/goods/card3.png");
 }
 
-.goods-card__link {
+.goods-card a {
   display: block;
   width: 350px;
   height: 650px;
@@ -674,12 +702,12 @@ button,
   background-color: rgba(4, 24, 39, 0.5);
 }
 
-.goods-card__link:hover,
-.goods-card__link:focus {
+.goods-card a:hover,
+.goods-card a:focus {
   background-color: rgba(4, 24, 39, 0);
 }
 
-.goods-card__title {
+.goods-card h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -689,7 +717,7 @@ button,
   margin: 0;
 }
 
-.goods-card__title--tablet {
+.goods-card--tablet {
   display: none;
 }
 
@@ -737,7 +765,7 @@ button,
   border-right: 972px solid transparent;
 }
 
-.contact-form__image {
+.contact-form img {
   position: absolute;
   top: 246px;
   left: 350px;
@@ -963,7 +991,7 @@ label[for=input-agreement]::after {
   left: 360px;
 }
 
-.social__list {
+.social ul {
   list-style-type: none;
   width: 150px;
   height: 40px;
@@ -979,12 +1007,27 @@ label[for=input-agreement]::after {
   justify-content: space-between;
 }
 
-.social__link {
+.social a {
   fill: #f2f5f7;
 }
 
-.social__link:hover {
+.social a:hover {
   fill: #00b2ff;
+}
+
+.social h3,
+.social h4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .navigation {
@@ -994,7 +1037,7 @@ label[for=input-agreement]::after {
   position: relative;
 }
 
-.navigation__title {
+.navigation h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1007,7 +1050,7 @@ label[for=input-agreement]::after {
   margin-bottom: 21px;
 }
 
-.navigation__list {
+.navigation ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1023,16 +1066,16 @@ label[for=input-agreement]::after {
   height: 150px;
 }
 
-.navigation__item {
+.navigation li {
   width: 249px;
   min-height: 20px;
 }
 
-.navigation__item:not(:nth-child(4)) {
+.navigation li:not(:nth-child(4n)) {
   margin-bottom: 5px;
 }
 
-.navigation__link {
+.navigation a {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1041,13 +1084,27 @@ label[for=input-agreement]::after {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.navigation__link:hover,
-.navigation__link:focus {
+.navigation a:hover,
+.navigation a:focus {
   color: #00b2ff;
 }
 
-.navigation__button {
+.navigation button {
   display: none;
+}
+
+.navigation span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .contacts {
@@ -1055,7 +1112,7 @@ label[for=input-agreement]::after {
   position: relative;
 }
 
-.contacts__container {
+.contacts address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1065,7 +1122,7 @@ label[for=input-agreement]::after {
   flex-direction: column;
 }
 
-.contacts__title {
+.contacts h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1078,20 +1135,35 @@ label[for=input-agreement]::after {
   margin-bottom: 24px;
 }
 
-.contacts__address,
-.contacts__phone {
+.contacts p,
+.contacts a {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
+  margin: 0;
   margin-bottom: 10px;
   width: 345px;
 }
 
-.contacts__button {
+.contacts button {
   display: none;
+}
+
+.contacts span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .footer {
@@ -1434,15 +1506,15 @@ label[for=modal-checkbox]::before {
     margin-right: 0;
   }
 
-  .header-contacts__link-text {
-    display: none;
-  }
-
   .header-contacts__wrapper {
     width: 82px;
   }
 
-  .header-contacts__image {
+  .header-contacts span {
+    display: none;
+  }
+
+  .header-contacts svg {
     margin-right: 0;
   }
 
@@ -1459,7 +1531,7 @@ label[for=modal-checkbox]::before {
     padding-left: 26px;
   }
 
-  .header__button {
+  .header button {
     display: none;
   }
 
@@ -1474,14 +1546,14 @@ label[for=modal-checkbox]::before {
     padding: 149px 25px 70px;
   }
 
-  .title__title {
+  .title h1 {
     font-size: 36px;
     line-height: 42px;
     letter-spacing: 0.07em;
     margin-bottom: 9px;
   }
 
-  .title__text {
+  .title p {
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 44px;
@@ -1499,7 +1571,7 @@ label[for=modal-checkbox]::before {
     display: inline;
   }
 
-  .title__button {
+  .title a {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
@@ -1517,7 +1589,7 @@ label[for=modal-checkbox]::before {
     padding: 50px 25px 47px;
   }
 
-  .advantages__list {
+  .advantages ul {
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
     margin: 0;
@@ -1537,18 +1609,18 @@ label[for=modal-checkbox]::before {
     height: 325px;
   }
 
-  .advantages-card__image {
+  .advantages-card svg {
     margin-bottom: 6px;
     width: 30px;
     height: 30px;
   }
 
-  .advantages-card__title {
+  .advantages-card h3 {
     margin-bottom: 6px;
     font-size: 20px;
   }
 
-  .advantages-card__text {
+  .advantages-card p {
     font-size: 14px;
     line-height: 19px;
   }
@@ -1562,17 +1634,17 @@ label[for=modal-checkbox]::before {
     padding: 0 25px 80px;
   }
 
-  .about-company__image {
+  .about-company img {
     display: none;
   }
 
-  .about-company__title {
+  .about-company h2 {
     font-size: 28px;
     line-height: 39px;
     margin-left: 0;
   }
 
-  .about-company__text {
+  .about-company p {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 18px;
@@ -1591,7 +1663,7 @@ label[for=modal-checkbox]::before {
     height: 204px;
   }
 
-  .about-company__button {
+  .about-company button {
     width: 160px;
     padding: 8px 12px;
     margin-left: 0;
@@ -1606,26 +1678,18 @@ label[for=modal-checkbox]::before {
     padding: 48px 25px 70px;
   }
 
-  .goods__list {
+  .goods ul {
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
     row-gap: 30px;
   }
 
-  .goods__text {
+  .goods__text--width {
     display: none;
   }
 
   .goods__text--mobile {
-    display: block;
-    font-family: "Roboto Condensed", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 39px;
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 29px;
+    display: inline;
   }
 
   .goods-card {
@@ -1633,11 +1697,11 @@ label[for=modal-checkbox]::before {
     height: 250px;
   }
 
-  .goods-card__title--tablet {
+  .goods-card--tablet {
     display: block;
   }
 
-  .goods-card__title--desktop {
+  .goods-card--desktop {
     display: none;
   }
 
@@ -1648,7 +1712,7 @@ label[for=modal-checkbox]::before {
     height: 40px;
   }
 
-  .goods-card__title {
+  .goods-card h3 {
     font-size: 18px;
   }
 
@@ -1664,7 +1728,7 @@ label[for=modal-checkbox]::before {
     background-image: url("../../img/goods/card3-mobile.jpg");
   }
 
-  .goods-card__link {
+  .goods-card a {
     display: block;
     width: 270px;
     height: 250px;
@@ -1690,7 +1754,7 @@ label[for=modal-checkbox]::before {
     display: none;
   }
 
-  .contact-form__image {
+  .contact-form img {
     display: none;
   }
 
@@ -1768,31 +1832,31 @@ label[for=modal-checkbox]::before {
     border-bottom: 1px solid #ffffff;
   }
 
-  .navigation__title {
+  .navigation h3 {
     margin: 0;
   }
 
-  .navigation__list {
+  .navigation ul {
     min-height: 203px;
     margin-top: 10px;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 
-  .navigation__list--close {
+  .navigation .navigation__list--close {
     display: none;
   }
 
-  .navigation__item:not(:last-child) {
+  .navigation li:not(:last-child) {
     margin-bottom: 5px;
   }
 
-  .navigation__link {
+  .navigation a {
     font-size: 14px;
     line-height: 19px;
   }
 
-  .navigation__button {
+  .navigation button {
     position: absolute;
     top: 20px;
     left: 279px;
@@ -1804,7 +1868,7 @@ label[for=modal-checkbox]::before {
     cursor: pointer;
   }
 
-  .navigation__button::before {
+  .navigation button::before {
     content: "";
     position: absolute;
     top: 7px;
@@ -1831,15 +1895,15 @@ label[for=modal-checkbox]::before {
     border-bottom: 1px solid #ffffff;
   }
 
-  .contacts__container--close {
+  .contacts .contacts__container--close {
     display: none;
   }
 
-  .contacts__title {
+  .contacts h3 {
     margin: 0;
   }
 
-  .contacts__button {
+  .contacts button {
     position: absolute;
     top: 20px;
     left: 279px;
@@ -1851,7 +1915,7 @@ label[for=modal-checkbox]::before {
     cursor: pointer;
   }
 
-  .contacts__button::before {
+  .contacts button::before {
     content: "";
     position: absolute;
     top: 7px;
@@ -1871,7 +1935,7 @@ label[for=modal-checkbox]::before {
     background-color: #ffffff;
   }
 
-  .contacts__address {
+  .contacts p {
     margin-top: 18px;
     font-size: 14px;
     line-height: 19px;
@@ -1879,7 +1943,7 @@ label[for=modal-checkbox]::before {
     margin-bottom: 17px;
   }
 
-  .contacts__phone {
+  .contacts a {
     font-size: 14px;
     line-height: 25px;
     margin-bottom: 5px;
@@ -1922,15 +1986,15 @@ label[for=modal-checkbox]::before {
     margin-top: -13px;
   }
 
-  .header-contacts__link-text {
-    display: none;
-  }
-
   .header-contacts__wrapper {
     width: 100px;
   }
 
-  .header-contacts__image {
+  .header-contacts span {
+    display: none;
+  }
+
+  .header-contacts svg {
     margin-right: 18px;
   }
 
@@ -1947,7 +2011,7 @@ label[for=modal-checkbox]::before {
     padding-left: 50px;
   }
 
-  .header__button {
+  .header button {
     display: none;
   }
 
@@ -1962,18 +2026,18 @@ label[for=modal-checkbox]::before {
     padding: 192px 50px 218px;
   }
 
-  .title__title {
+  .title h1 {
     font-size: 64px;
     line-height: 75px;
     letter-spacing: 0.09em;
     margin-bottom: 4px;
   }
 
-  .title__text {
+  .title p {
     margin-bottom: 73px;
   }
 
-  .title__button {
+  .title a {
     margin-left: 46px;
   }
 
@@ -1986,7 +2050,7 @@ label[for=modal-checkbox]::before {
     padding: 64px 50px 34px;
   }
 
-  .advantages__list {
+  .advantages ul {
     -ms-grid-columns: 320px 320px;
     grid-template-columns: 320px 320px;
   }
@@ -1997,11 +2061,11 @@ label[for=modal-checkbox]::before {
     padding: 40px 35px 35px 45px;
   }
 
-  .advantages-card__image {
+  .advantages-card svg {
     margin-bottom: 8px;
   }
 
-  .advantages-card__title {
+  .advantages-card h3 {
     margin-bottom: 9px;
   }
 
@@ -2014,12 +2078,12 @@ label[for=modal-checkbox]::before {
     padding: 42px 50px 80px;
   }
 
-  .about-company__image {
+  .about-company img {
     top: 46px;
     left: 46px;
   }
 
-  .about-company__title {
+  .about-company h2 {
     margin-left: 175px;
   }
 
@@ -2032,7 +2096,7 @@ label[for=modal-checkbox]::before {
     height: 260px;
   }
 
-  .about-company__button {
+  .about-company button {
     margin-left: 175px;
   }
 
@@ -2045,13 +2109,13 @@ label[for=modal-checkbox]::before {
     padding: 54px 50px 75px;
   }
 
-  .goods__list {
+  .goods ul {
     -ms-grid-columns: 670px;
     grid-template-columns: 670px;
     row-gap: 30px;
   }
 
-  .goods__text {
+  .goods p {
     margin-bottom: 38px;
   }
 
@@ -2060,11 +2124,11 @@ label[for=modal-checkbox]::before {
     height: 250px;
   }
 
-  .goods-card__title--tablet {
+  .goods-card--tablet {
     display: block;
   }
 
-  .goods-card__title--desktop {
+  .goods-card--desktop {
     display: none;
   }
 
@@ -2085,7 +2149,7 @@ label[for=modal-checkbox]::before {
     background-image: url("../../img/goods/card3-tablet.jpg");
   }
 
-  .goods-card__link {
+  .goods-card a {
     display: block;
     width: 670px;
     height: 250px;
@@ -2110,7 +2174,7 @@ label[for=modal-checkbox]::before {
     display: none;
   }
 
-  .contact-form__image {
+  .contact-form img {
     display: none;
   }
 
@@ -2167,11 +2231,11 @@ label[for=modal-checkbox]::before {
     padding-top: 0;
   }
 
-  .navigation__list {
+  .navigation ul {
     height: 230px;
   }
 
-  .navigation__item:not(:last-child) {
+  .navigation li:not(:last-child) {
     margin-bottom: 5px;
   }
 
@@ -2179,11 +2243,11 @@ label[for=modal-checkbox]::before {
     padding-top: 2px;
   }
 
-  .contacts__title {
+  .contacts h3 {
     margin-bottom: 22px;
   }
 
-  .contacts__address {
+  .contacts p {
     margin-bottom: 12px;
   }
 

@@ -17,7 +17,7 @@
   padding-left: 350px;
 }
 
-.header__button {
+.header button {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 700;
@@ -35,7 +35,7 @@
   width: 160px;
 }
 
-.header__button:hover {
+.header button:hover {
   color: $color-black-pearl;
   background-color: $color-alice-blue;
 }
@@ -54,7 +54,7 @@
     padding-left: 50px;
   }
 
-  .header__button {
+  .header button {
     display: none;
   }
 }
@@ -73,7 +73,7 @@
     padding-left: 26px;
   }
 
-  .header__button {
+  .header button {
     display: none;
   }
 }

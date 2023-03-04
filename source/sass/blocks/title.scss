@@ -17,7 +17,7 @@
   padding: 301px 80px 80px 475px;
 }
 
-.title__title {
+.title h1 {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 700;
@@ -30,7 +30,7 @@
   margin-bottom: 36px;
 }
 
-.title__text {
+.title p {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -41,7 +41,7 @@
   margin-bottom: 62px;
 }
 
-.title__button {
+.title a {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 700;
@@ -56,8 +56,8 @@
   border-radius: 3px;
 }
 
-.title__button:hover,
-.title__button:focus {
+.title a:hover,
+.title a:focus {
   background-color: $color-cerulean;
 }
 
@@ -77,18 +77,18 @@
     padding: 192px 50px 218px;
   }
 
-  .title__title {
+  .title h1 {
     font-size: 64px;
     line-height: 75px;
     letter-spacing: 0.09em;
     margin-bottom: 4px;
   }
 
-  .title__text {
+  .title p {
     margin-bottom: 73px;
   }
 
-  .title__button {
+  .title a {
     margin-left: 46px;
   }
 }
@@ -105,14 +105,14 @@
     padding: 149px 25px 70px;
   }
 
-  .title__title {
+  .title h1 {
     font-size: 36px;
     line-height: 42px;
     letter-spacing: 0.07em;
     margin-bottom: 9px;
   }
 
-  .title__text {
+  .title p {
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 44px;
@@ -130,7 +130,7 @@
     display: inline;
   }
 
-  .title__button {
+  .title a {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
