@@ -1678,6 +1678,12 @@ label[for=modal-checkbox]::before {
     padding: 48px 25px 70px;
   }
 
+  .goods p {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+
   .goods ul {
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
@@ -1808,7 +1814,7 @@ label[for=modal-checkbox]::before {
     padding: 13px 25px;
   }
 
-  label[for=input-agreement] {
+  .contact-form__form label[for=input-agreement] {
     margin-left: 31px;
     margin-top: 23px;
   }
