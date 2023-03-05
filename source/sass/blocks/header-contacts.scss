@@ -1,8 +1,5 @@
 .header-contacts {
   margin-right: 165px;
-}
-
-.header-contacts__wrapper {
   display: flex;
   justify-content: space-between;
   width: 460px;
@@ -27,9 +24,6 @@
   .header-contacts {
     margin-right: 0;
     margin-top: -13px;
-  }
-
-  .header-contacts__wrapper {
     width: 100px;
   }
 
@@ -45,9 +39,6 @@
 @media (max-width: 767px) {
   .header-contacts {
     margin-right: 0;
-  }
-
-  .header-contacts__wrapper {
     width: 82px;
   }
 
