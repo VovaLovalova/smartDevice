@@ -189,12 +189,16 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 160px;
   width: 215px;
+  margin-right: 160px;
 }
 
 .logo__image {
   margin-right: 15px;
+}
+
+.logo__container {
+  width: 145px;
 }
 
 .logo__text {
@@ -1963,6 +1967,28 @@ label[for=modal-checkbox]::before {
 
   .footer__logo {
     margin-bottom: 79px;
+  }
+}
+
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .logo {
+    margin-right: 0;
+  }
+
+  .header-contacts {
+    margin-right: 0;
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .header__container {
+    max-width: 1160px;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
