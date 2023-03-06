@@ -279,9 +279,10 @@ label[for="input-agreement"]::after {
   .contact-form__form button[type="submit"] {
     margin-right: 85px;
     padding: 15px 25px 13px;
+    width: 295px;
   }
 
-  label[for="input-agreement"] {
+  .contact-form__form label[for="input-agreement"] {
     margin-top: 10px;
   }
 }
