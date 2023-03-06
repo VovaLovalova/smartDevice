@@ -8,9 +8,11 @@
 }
 
 .contact-form__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 165px 350px 260px 975px;
+  padding-top: 165px;
+  padding-left: 975px;
   position: relative;
 }
 
@@ -58,7 +60,11 @@
   margin-left: 5px;
 }
 
-.contact-form__form h2 {
+.contact-form__form {
+  width: 580px;
+}
+
+.contact-form h2 {
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 400;
@@ -69,7 +75,7 @@
   margin-bottom: 12px;
 }
 
-.contact-form__form p {
+.contact-form p {
   font-family: $ff-ptmono;
   font-style: normal;
   font-weight: 400;
@@ -200,6 +206,24 @@ label[for="input-agreement"]::after {
   border: none;
 }
 
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .contact-form__container {
+    padding-left: 40%;
+  }
+
+  .contact-form__form {
+    position: relative;
+    z-index: 4;
+  }
+
+  .contact-form img {
+    top: 25%;
+    left: 10%;
+    width: 25%;
+    height: auto;
+  }
+}
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .contact-form {
     height: 580px;
@@ -271,6 +295,10 @@ label[for="input-agreement"]::after {
   .contact-form__container {
     width: 320px;
     padding: 45px 25px 90px;
+  }
+
+  .contact-form__form {
+    width: 270px;
   }
 
   .contact-form__container::before {

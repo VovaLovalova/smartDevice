@@ -8,12 +8,23 @@
 }
 
 .footer__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 47px 350px;
+  padding-top: 47px;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   position: relative;
+}
+
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .footer__container {
+    max-width: 1220px;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {

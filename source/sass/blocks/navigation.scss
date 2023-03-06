@@ -68,6 +68,13 @@
   clip-path: inset(100%);
 }
 
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .navigation {
+    width: 394px;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .navigation {
     width: 320px;

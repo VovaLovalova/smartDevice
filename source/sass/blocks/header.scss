@@ -7,7 +7,7 @@
   align-items: center;
   padding-top: 27px;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
 }
 
 .header__container {
@@ -42,7 +42,7 @@
 
 @media (max-width: 1919px) and (min-width: 1024px) {
   .header__container {
-    max-width: 1160px;
+    max-width: 980px;
     width: 100%;
     justify-content: space-between;
     padding-left: 50px;

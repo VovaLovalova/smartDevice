@@ -60,6 +60,21 @@
   display: none;
 }
 
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .goods-card {
+    width: 280px;
+  }
+
+  .goods-card::before {
+    left: 219px;
+  }
+
+  .goods-card a {
+    width: 280px;
+    padding: 48px 20px 80px;
+  }
+}
+
 
 @media (max-width: 1023px) and (min-width: 768px) {
   .goods-card {

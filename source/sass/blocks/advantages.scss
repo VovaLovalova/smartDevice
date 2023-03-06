@@ -8,9 +8,14 @@
 }
 
 .advantages__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 104px 350px 98px;
+  padding-top: 104px;
+  padding-bottom: 98px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .advantages h2 {
@@ -30,7 +35,7 @@
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: 595px 595px;
+  grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
 }

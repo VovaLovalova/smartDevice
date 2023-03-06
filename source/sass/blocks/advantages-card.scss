@@ -63,6 +63,12 @@
   fill: $color-default-white;
 }
 
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .advantages-card {
+    width: 480px;
+  }
+}
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .advantages-card {
     width: 320px;

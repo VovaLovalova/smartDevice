@@ -8,9 +8,12 @@
 }
 
 .goods__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 66px 350px 125px;
+  padding-top: 66px;
+  padding-bottom: 125px;
+  padding-left: 350px;
 }
 
 .goods h2 {
@@ -45,12 +48,29 @@
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: 350px 350px 350px;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 85px;
+  max-width: 1220px;
+  width: 100%;
 }
 
 .goods li {
   background-color: $color-deep-sky-blue;
+}
+
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .goods__container {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .goods ul {
+    column-gap: 30px;
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {

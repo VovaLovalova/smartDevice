@@ -269,7 +269,7 @@ button,
   align-items: center;
   padding-top: 27px;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
 }
 
 .header__container {
@@ -327,9 +327,11 @@ button,
 }
 
 .title__container {
-  width: 1920px;
-  min-height: 100%;
-  padding: 301px 80px 80px 475px;
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  padding-top: 301px;
+  padding-left: 475px;
 }
 
 .title h1 {
@@ -397,9 +399,21 @@ button,
 }
 
 .advantages__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 104px 350px 98px;
+  padding-top: 104px;
+  padding-bottom: 98px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .advantages h2 {
@@ -421,8 +435,8 @@ button,
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 595px 595px;
-  grid-template-columns: 595px 595px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
@@ -511,9 +525,21 @@ button,
 }
 
 .about-company__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 5px 350px 120px;
+  padding-top: 5px;
+  padding-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -526,11 +552,12 @@ button,
   color: #041827;
   margin: 0;
   margin-bottom: 13px;
-  margin-left: 250px;
+  margin-left: 600px;
 }
 
 .about-company__text-container {
-  margin-left: 250px;
+  width: 970px;
+  margin-left: 600px;
   overflow-y: hidden;
   margin-bottom: 21px;
 }
@@ -572,7 +599,7 @@ button,
   border: 1px solid #00b2ff;
   border-radius: 3px;
   background-color: transparent;
-  margin-left: 250px;
+  margin-left: 600px;
   width: 180px;
   cursor: pointer;
 }
@@ -605,9 +632,12 @@ button,
 }
 
 .goods__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 66px 350px 125px;
+  padding-top: 66px;
+  padding-bottom: 125px;
+  padding-left: 350px;
 }
 
 .goods h2 {
@@ -644,11 +674,13 @@ button,
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 350px 350px 350px;
-  grid-template-columns: 350px 350px 350px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   -webkit-column-gap: 85px;
   -moz-column-gap: 85px;
   column-gap: 85px;
+  max-width: 1220px;
+  width: 100%;
 }
 
 .goods li {
@@ -734,9 +766,11 @@ button,
 }
 
 .contact-form__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 165px 350px 260px 975px;
+  padding-top: 165px;
+  padding-left: 975px;
   position: relative;
 }
 
@@ -795,7 +829,11 @@ button,
   margin-left: 5px;
 }
 
-.contact-form__form h2 {
+.contact-form__form {
+  width: 580px;
+}
+
+.contact-form h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -806,7 +844,7 @@ button,
   margin-bottom: 12px;
 }
 
-.contact-form__form p {
+.contact-form p {
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: 400;
@@ -1179,15 +1217,19 @@ label[for=input-agreement]::after {
 }
 
 .footer__container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   min-height: 100%;
-  padding: 47px 350px;
+  padding-top: 47px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -1648,6 +1690,7 @@ label[for=modal-checkbox]::before {
   }
 
   .about-company__text-container {
+    width: 270px;
     margin-left: 0;
     margin-bottom: 17px;
   }
@@ -1743,6 +1786,10 @@ label[for=modal-checkbox]::before {
   .contact-form__container {
     width: 320px;
     padding: 45px 25px 90px;
+  }
+
+  .contact-form__form {
+    width: 270px;
   }
 
   .contact-form__container::before {
@@ -1977,18 +2024,120 @@ label[for=modal-checkbox]::before {
 
   .header-contacts {
     margin-right: 0;
-    max-width: 460px;
+    max-width: 380px;
     width: 100%;
   }
 
   .header__container {
-    max-width: 1160px;
+    max-width: 980px;
     width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .title__container {
+    padding-left: 20%;
+  }
+
+  .advantages-card {
+    width: 480px;
+  }
+
+  .about-company h2 {
+    margin-left: 34%;
+  }
+
+  .about-company__text-container {
+    width: 50%;
+    margin-left: 34%;
+  }
+
+  .about-company button {
+    margin-left: 34%;
+  }
+
+  .about-company img {
+    left: 16%;
+  }
+
+  .goods__container {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .goods ul {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .goods-card {
+    width: 280px;
+  }
+
+  .goods-card::before {
+    left: 219px;
+  }
+
+  .goods-card a {
+    width: 280px;
+    padding: 48px 20px 80px;
+  }
+
+  .contact-form__container {
+    padding-left: 40%;
+  }
+
+  .contact-form__form {
+    position: relative;
+    z-index: 4;
+  }
+
+  .contact-form img {
+    top: 25%;
+    left: 10%;
+    width: 25%;
+    height: auto;
+  }
+
+  .social {
+    left: 7%;
+  }
+
+  .navigation {
+    width: 394px;
+    margin-right: 0;
+  }
+
+  .contacts {
+    width: 214px;
+  }
+
+  .contacts p {
+    width: 214px;
+  }
+
+  .footer__container {
+    max-width: 1220px;
+    padding-left: 50px;
+    padding-right: 50px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
@@ -2106,6 +2255,7 @@ label[for=modal-checkbox]::before {
   }
 
   .about-company__text-container {
+    width: 495px;
     margin-left: 175px;
     margin-bottom: 16px;
   }
