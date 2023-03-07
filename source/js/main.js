@@ -106,6 +106,12 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    let onFolderClick = function (e) {
+      if (e.target === modal) {
+        modal.classList.add('modal--close');
+      }
+    };
+
     let onSubmitForm = function () {
       modal.classList.add('modal--close');
     };
@@ -118,6 +124,7 @@ window.addEventListener('DOMContentLoaded', () => {
       modalCloseButton.addEventListener('click', onCloseModalButtonClick);
       document.addEventListener('keydown', onEscKeydown);
       modalForm.addEventListener('submit', onSubmitForm);
+      document.addEventListener('click', onFolderClick);
     };
 
     modalOpenButton.addEventListener('click', onOpenModalButtonClick);

@@ -34,6 +34,10 @@
   width: 345px;
 }
 
+.contacts a:hover {
+  color: $color-deep-sky-blue;
+}
+
 .contacts button {
   display: none;
 }

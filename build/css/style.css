@@ -47,7 +47,6 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 24px;
   color: #000000;
   scroll-behavior: smooth;
@@ -245,6 +244,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.header-contacts a:hover {
+  color: #00b2ff;
 }
 
 .header-contacts svg {
@@ -299,6 +306,10 @@ button,
   border-radius: 3px;
   cursor: pointer;
   width: 160px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header button:hover {
@@ -371,10 +382,13 @@ button,
   padding: 15px 25px;
   background-color: #00b2ff;
   border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.title a:hover,
-.title a:focus {
+.title a:hover {
   background-color: #0072a3;
 }
 
@@ -602,6 +616,10 @@ button,
   margin-left: 600px;
   width: 180px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .about-company button:hover {
@@ -901,7 +919,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form__form input[type=text]::-moz-placeholder,
@@ -912,7 +930,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form__form input[type=text]:-ms-input-placeholder,
@@ -923,7 +941,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form__form input[type=text]::-ms-input-placeholder,
@@ -934,7 +952,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form__form input[type=text]::placeholder,
@@ -945,7 +963,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form__form input[type=checkbox] {
@@ -1011,10 +1029,13 @@ label[for=input-agreement]::after {
   border-radius: 3px;
   cursor: pointer;
   border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.contact-form__form button[type=submit]:hover,
-.contact-form__form button[type=submit]:focus {
+.contact-form__form button[type=submit]:hover {
   background-color: #026592;
   border: none;
 }
@@ -1043,6 +1064,7 @@ label[for=input-agreement]::after {
 
 .social a {
   fill: #f2f5f7;
+  cursor: pointer;
 }
 
 .social a:hover {
@@ -1116,15 +1138,22 @@ label[for=input-agreement]::after {
   font-size: 16px;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.navigation a:hover,
-.navigation a:focus {
+.navigation a:hover {
   color: #00b2ff;
 }
 
 .navigation button {
   display: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .navigation span {
@@ -1180,6 +1209,10 @@ label[for=input-agreement]::after {
   margin: 0;
   margin-bottom: 10px;
   width: 345px;
+}
+
+.contacts a:hover {
+  color: #00b2ff;
 }
 
 .contacts button {
@@ -1243,7 +1276,7 @@ label[for=input-agreement]::after {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 3;
+  z-index: 6;
 }
 
 .modal--close {
@@ -1327,7 +1360,7 @@ label[for=input-agreement]::after {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .modal__form input[type=text]::-moz-placeholder,
@@ -1338,7 +1371,7 @@ label[for=input-agreement]::after {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .modal__form input[type=text]:-ms-input-placeholder,
@@ -1349,7 +1382,7 @@ label[for=input-agreement]::after {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .modal__form input[type=text]::-ms-input-placeholder,
@@ -1360,7 +1393,7 @@ label[for=input-agreement]::after {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .modal__form input[type=text]::placeholder,
@@ -1371,7 +1404,7 @@ label[for=input-agreement]::after {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .modal__form input[type=text]:hover,
@@ -1452,6 +1485,10 @@ label[for=modal-checkbox]::before {
   background-position: center;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .modal__window button[type=reset]:hover,

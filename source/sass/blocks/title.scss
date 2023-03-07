@@ -56,10 +56,10 @@
   padding: 15px 25px;
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
+  user-select: none;
 }
 
-.title a:hover,
-.title a:focus {
+.title a:hover {
   background-color: $color-cerulean;
 }
 

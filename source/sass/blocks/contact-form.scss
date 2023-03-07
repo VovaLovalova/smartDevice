@@ -132,7 +132,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: $color-default-white;
+  color: $color-transparent;
 }
 
 .contact-form__form input[type="checkbox"] {
@@ -198,10 +198,10 @@ label[for="input-agreement"]::after {
   border-radius: 3px;
   cursor: pointer;
   border: none;
+  user-select: none;
 }
 
-.contact-form__form button[type="submit"]:hover,
-.contact-form__form button[type="submit"]:focus {
+.contact-form__form button[type="submit"]:hover {
   background-color: $color-cerulean-dark;
   border: none;
 }
