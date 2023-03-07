@@ -321,7 +321,7 @@ button,
   width: 100%;
   min-height: 880px;
   background-color: #000000;
-  background-image: url("../../img/main-bg.png");
+  background-image: url("../../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1611,7 +1611,7 @@ label[for=modal-checkbox]::before {
   .title {
     min-height: 560px;
     margin-top: 0;
-    background-image: url("../../img/main-bg-mobile.png");
+    background-image: url("../../img/main-bg-mobile.jpg");
   }
 
   .title__container {
@@ -2223,7 +2223,7 @@ label[for=modal-checkbox]::before {
   .title {
     min-height: 640px;
     margin-top: -15px;
-    background-image: url("../../img/main-bg-tablet.png");
+    background-image: url("../../img/main-bg-tablet.jpg");
   }
 
   .title__container {
