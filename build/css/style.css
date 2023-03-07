@@ -1277,6 +1277,7 @@ label[for=input-agreement]::after {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 6;
+  overflow: auto;
 }
 
 .modal--close {

@@ -94,31 +94,36 @@ window.addEventListener('DOMContentLoaded', () => {
   let modalCloseButton = document.querySelector('#modal-close-button');
   let modalForm = document.querySelector('.modal__form');
   let nameInput = document.querySelector('#modal-input-name');
+  let html = document.querySelector('html');
 
   if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput) {
     let onCloseModalButtonClick = function () {
       modal.classList.add('modal--close');
+      html.setAttribute('style', 'overflow-y: auto;');
     };
 
     let onEscKeydown = function (e) {
       if (e.keyCode === 27) {
         modal.classList.add('modal--close');
+        html.setAttribute('style', 'overflow-y: auto;');
       }
     };
 
     let onFolderClick = function (e) {
       if (e.target === modal) {
         modal.classList.add('modal--close');
+        html.setAttribute('style', 'overflow-y: auto;');
       }
     };
 
     let onSubmitForm = function () {
       modal.classList.add('modal--close');
+      html.setAttribute('style', 'overflow-y: auto;');
     };
 
     let onOpenModalButtonClick = function () {
       modal.classList.remove('modal--close');
-
+      html.setAttribute('style', 'overflow-y: hidden;');
       nameInput.focus();
 
       modalCloseButton.addEventListener('click', onCloseModalButtonClick);
