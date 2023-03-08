@@ -105,14 +105,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  let onModalCheckboxChange = function () {
+  let onContactCheckboxChange = function () {
     if (contactFormContainer.querySelectorAll('#error').length > 0) {
       contactFormContainer.removeChild(erorr);
     }
   };
 
   contactForm.addEventListener('submit', onSubmitContactForm);
-  contactCheckbox.addEventListener('change', onModalCheckboxChange);
+  contactCheckbox.addEventListener('change', onContactCheckboxChange);
 
   // МОДАЛЬНОЕ ОКНО
 

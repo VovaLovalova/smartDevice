@@ -67,12 +67,12 @@
   left: 314px;
   background-color: $color-default-white;
   border-radius: 4px;
-  border: 1px solid tomato;
+  border: 1px solid #ff0000;
   font-family: $ff-ptmono;
   font-size: 16px;
   line-height: 22px;
   padding: 3px 5px;
-  color: tomato;
+  color: #ff0000;
 }
 
 .contact-form__form {
@@ -190,7 +190,7 @@ label[for="input-agreement"]::after {
   left: -25px;
 }
 
-.contact-form__form input[type="checkbox"]:checked+label[for="input-agreement"]::after {
+.contact-form__form input[type="checkbox"]:checked + label[for="input-agreement"]::after {
   background-image: url("../../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
