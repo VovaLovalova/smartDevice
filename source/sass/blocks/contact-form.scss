@@ -58,6 +58,21 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   margin-left: 5px;
+  position: relative;
+}
+
+.contact-form__confirm-container div {
+  position: absolute;
+  top: 60px;
+  left: 314px;
+  background-color: $color-default-white;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  font-family: $ff-ptmono;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 3px 5px;
+  color: tomato;
 }
 
 .contact-form__form {
@@ -175,7 +190,7 @@ label[for="input-agreement"]::after {
   left: -25px;
 }
 
-.contact-form__form input[type="checkbox"]:checked + label[for="input-agreement"]::after {
+.contact-form__form input[type="checkbox"]:checked+label[for="input-agreement"]::after {
   background-image: url("../../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -285,6 +300,11 @@ label[for="input-agreement"]::after {
   .contact-form__form label[for="input-agreement"] {
     margin-top: 10px;
   }
+
+  .contact-form__confirm-container div {
+    top: 54px;
+    left: 337px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -365,5 +385,10 @@ label[for="input-agreement"]::after {
   label[for="input-agreement"]::before {
     top: 8px;
     left: -26px;
+  }
+
+  .contact-form__confirm-container div {
+    top: 112px;
+    left: 4px;
   }
 }

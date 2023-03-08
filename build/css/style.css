@@ -845,6 +845,21 @@ button,
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-left: 5px;
+  position: relative;
+}
+
+.contact-form__confirm-container div {
+  position: absolute;
+  top: 60px;
+  left: 314px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  font-family: "PT Mono", "Arial", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 3px 5px;
+  color: tomato;
 }
 
 .contact-form__form {
@@ -1500,6 +1515,24 @@ label[for=modal-checkbox]::before {
   border-radius: 3px;
 }
 
+.modal__form {
+  position: relative;
+}
+
+.modal__form div {
+  position: absolute;
+  top: 406px;
+  left: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  font-family: "PT Mono", "Arial", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 3px 5px;
+  color: tomato;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1901,6 +1934,11 @@ label[for=modal-checkbox]::before {
   label[for=input-agreement]::before {
     top: 8px;
     left: -26px;
+  }
+
+  .contact-form__confirm-container div {
+    top: 112px;
+    left: 4px;
   }
 
   .social {
@@ -2425,6 +2463,11 @@ label[for=modal-checkbox]::before {
 
   .contact-form__form label[for=input-agreement] {
     margin-top: 10px;
+  }
+
+  .contact-form__confirm-container div {
+    top: 54px;
+    left: 337px;
   }
 
   .social {

@@ -245,14 +245,14 @@
           <p>Мы проконсультируем Вас бесплатно</p>
           <div class="contact-form__input-container">
             <label class="visually-hidden" for="input-name">Имя клиента</label>
-            <input type="text" name="name" placeholder="Имя" id="input-name" required>
+            <input type="text" name="name" placeholder="Имя" id="input-name" required autocomplete="off">
             <label class="visually-hidden" for="input-phone">Номер телефона клиента</label>
-            <input type="tel" name="phone number" placeholder="Телефон" id="input-phone" required>
+            <input type="tel" name="phone number" placeholder="Телефон" id="input-phone" required autocomplete="off">
             <label class="visually-hidden" for="question">Вопрос клиента</label>
             <textarea name="question" placeholder="Ваш вопрос" id="question"></textarea>
           </div>
           <div class="contact-form__confirm-container">
-            <input type="checkbox" name="agreement" id="input-agreement" value="agree" required>
+            <input type="checkbox" name="agreement" id="input-agreement" value="agree">
             <label for="input-agreement">Я согласен на обработку персональных
               данных</label>
             <button type="submit" value="submit">Задать вопрос</button>
@@ -371,20 +371,19 @@
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" name="customer question form">
         <label class="visually-hidden" for="modal-input-name">Имя</label>
-        <input id="modal-input-name" type="text" name="name" placeholder="Имя" required>
+        <input id="modal-input-name" type="text" name="name" placeholder="Имя" required autocomplete="off">
         <label class="visually-hidden" for="modal-input-phone">Телефон</label>
-        <input id="modal-input-phone" type="tel" name="phone" placeholder="Телефон" required>
+        <input id="modal-input-phone" type="tel" name="phone" placeholder="Телефон" required autocomplete="off">
         <label class="visually-hidden" for="modal-input-question">Вопрос клиента</label>
         <textarea id="modal-input-question" name="question" placeholder="Ваш вопрос"></textarea>
         <button id="modal-form-button" type="submit" value="submit">Отправить</button>
-        <input id="modal-checkbox" type="checkbox" name="consen" required>
+        <input id="modal-checkbox" type="checkbox" name="agreement" value="agree">
         <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
       </form>
       <button id="modal-close-button" type="reset"><span class="visually-hidden">Закрыть</span></button>
     </div>
   </div>
 
-  <!-- <script src="js/vendor.min.js"></script> -->
   <script src="js/main.min.js"></script>
 </body>
 
