@@ -1,10 +1,36 @@
-// import {iosVhFix} from './utils/ios-vh-fix';
-// import {initModals} from './modules/modals/init-modals';
-// import {Form} from './modules/form-validate/form';
+import {iosVhFix} from './utils/ios-vh-fix';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  // ЧЕКБОКС ФОРМЫ НА ГЛАВНОЙ СТРАНИЦЕ
+  let contactForm = document.querySelector('.contact-form__form');
+  let contactFormContainer = document.querySelector('.contact-form__confirm-container');
+  let contactCheckbox = document.querySelector('#input-agreement');
+  let erorr = document.createElement('div');
+  erorr.textContent = 'Необходимо дать согласие';
+  erorr.setAttribute('id', 'error');
+
+  let onSubmitContactForm = function (evt) {
+    evt.preventDefault();
+    if (!contactCheckbox.checked) {
+      if (contactFormContainer.querySelectorAll('#error').length === 0) {
+        contactFormContainer.appendChild(erorr);
+      }
+    } else {
+      contactForm.submit();
+    }
+  };
+
+  let onContactCheckboxChange = function () {
+    if (contactFormContainer.querySelectorAll('#error').length > 0) {
+      contactFormContainer.removeChild(erorr);
+    }
+  };
+
+  contactForm.addEventListener('submit', onSubmitContactForm);
+  contactCheckbox.addEventListener('change', onContactCheckboxChange);
 
   //  МАСКА ДЛЯ ВВОДА НОМЕРА ТЕЛЕФОНА
   let phoneInput = document.querySelectorAll('input[type=tel]');
@@ -63,7 +89,6 @@ window.addEventListener('DOMContentLoaded', () => {
       input.addEventListener('input', onPhoneInput);
       input.addEventListener('keydown', onPhonedelete);
     }
-
   }
 
   // КНОПКА "ПОДРОБНЕЕ"
@@ -84,99 +109,6 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     openButton.addEventListener('click', onOpenButtonClick);
-  }
-
-  // ФОРМА И ЧЕКБОКС НА ГЛАВНОЙ СТРАНИЦЕ
-  let contactForm = document.querySelector('.contact-form__form');
-  let contactFormContainer = document.querySelector('.contact-form__confirm-container');
-  let contactCheckbox = document.querySelector('#input-agreement');
-  let erorr = document.createElement('div');
-  erorr.textContent = 'Необходимо дать согласие';
-  erorr.setAttribute('id', 'error');
-
-  let onSubmitContactForm = function (evt) {
-    evt.preventDefault();
-    if (!contactCheckbox.checked) {
-      if (contactFormContainer.querySelectorAll('#error').length === 0) {
-        contactFormContainer.appendChild(erorr);
-      }
-    } else {
-      contactForm.submit();
-    }
-  };
-
-  let onContactCheckboxChange = function () {
-    if (contactFormContainer.querySelectorAll('#error').length > 0) {
-      contactFormContainer.removeChild(erorr);
-    }
-  };
-
-  contactForm.addEventListener('submit', onSubmitContactForm);
-  contactCheckbox.addEventListener('change', onContactCheckboxChange);
-
-  // МОДАЛЬНОЕ ОКНО
-
-  let modal = document.querySelector('.modal');
-  let modalOpenButton = document.querySelector('#header-button');
-  let modalCloseButton = document.querySelector('#modal-close-button');
-  let modalForm = document.querySelector('.modal__form');
-  let nameInput = document.querySelector('#modal-input-name');
-  let html = document.querySelector('html');
-  let modalCheckbox = document.querySelector('#modal-checkbox');
-
-  if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput && modalCheckbox) {
-    let onCloseModalButtonClick = function () {
-      modal.classList.add('modal--close');
-      html.setAttribute('style', 'overflow-y: auto;');
-    };
-
-    let onEscKeydown = function (e) {
-      if (e.keyCode === 27) {
-        modal.classList.add('modal--close');
-        html.setAttribute('style', 'overflow-y: auto;');
-      }
-    };
-
-    let onFolderClick = function (e) {
-      if (e.target === modal) {
-        modal.classList.add('modal--close');
-        html.setAttribute('style', 'overflow-y: auto;');
-      }
-    };
-
-    let onSubmitModalForm = function (evt) {
-      evt.preventDefault();
-      if (!modalCheckbox.checked) {
-        if (modalForm.querySelectorAll('#error').length === 0) {
-          modalForm.appendChild(erorr);
-        }
-      } else {
-        modalForm.submit();
-        modal.classList.add('modal--close');
-        html.setAttribute('style', 'overflow-y: auto;');
-      }
-    };
-
-    let onModalCheckboxChange = function () {
-      if (modalForm.querySelectorAll('#error').length > 0) {
-        modalForm.removeChild(erorr);
-      }
-    };
-
-    modalCheckbox.addEventListener('change', onModalCheckboxChange);
-
-    let onOpenModalButtonClick = function () {
-      modal.classList.remove('modal--close');
-      html.setAttribute('style', 'overflow-y: hidden;');
-      nameInput.focus();
-
-      modalCloseButton.addEventListener('click', onCloseModalButtonClick);
-      document.addEventListener('keydown', onEscKeydown);
-      modalForm.addEventListener('submit', onSubmitModalForm);
-      document.addEventListener('click', onFolderClick);
-    };
-
-    modalOpenButton.addEventListener('click', onOpenModalButtonClick);
   }
 
   // ТАБЫ В МОБИЛЬНОМ ФУТЕРЕ
@@ -220,19 +152,81 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  // iosVhFix();
+  iosVhFix();
 
   // // Modules
   // // ---------------------------------
 
   // // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // // в load следует добавить скрипты, не участвующие в работе первого экрана
-  // window.addEventListener('load', () => {
-  //   initModals();
-  //   const form = new Form();
-  //   window.form = form;
-  //   form.init();
-  // });
+
+  window.addEventListener('load', () => {
+    // МОДАЛЬНОЕ ОКНО
+
+    let modal = document.querySelector('.modal');
+    let modalOpenButton = document.querySelector('#header-button');
+    let modalCloseButton = document.querySelector('#modal-close-button');
+    let modalForm = document.querySelector('.modal__form');
+    let nameInput = document.querySelector('#modal-input-name');
+    let html = document.querySelector('html');
+    let modalCheckbox = document.querySelector('#modal-checkbox');
+
+    if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput && modalCheckbox) {
+      let onCloseModalButtonClick = function () {
+        modal.classList.add('modal--close');
+        html.setAttribute('style', 'overflow-y: auto;');
+      };
+
+      let onEscKeydown = function (e) {
+        if (e.keyCode === 27) {
+          modal.classList.add('modal--close');
+          html.setAttribute('style', 'overflow-y: auto;');
+        }
+      };
+
+      let onFolderClick = function (e) {
+        if (e.target === modal) {
+          modal.classList.add('modal--close');
+          html.setAttribute('style', 'overflow-y: auto;');
+        }
+      };
+
+      let onSubmitModalForm = function (evt) {
+        evt.preventDefault();
+        if (!modalCheckbox.checked) {
+          if (modalForm.querySelectorAll('#error').length === 0) {
+            modalForm.appendChild(erorr);
+          }
+        } else {
+          modalForm.submit();
+          modal.classList.add('modal--close');
+          html.setAttribute('style', 'overflow-y: auto;');
+        }
+      };
+
+      let onModalCheckboxChange = function () {
+        if (modalForm.querySelectorAll('#error').length > 0) {
+          modalForm.removeChild(erorr);
+        }
+      };
+
+      modalCheckbox.addEventListener('change', onModalCheckboxChange);
+
+      let onOpenModalButtonClick = function () {
+        modal.classList.remove('modal--close');
+        html.setAttribute('style', 'overflow-y: hidden;');
+        nameInput.focus();
+
+        modalCloseButton.addEventListener('click', onCloseModalButtonClick);
+        document.addEventListener('keydown', onEscKeydown);
+        modalForm.addEventListener('submit', onSubmitModalForm);
+        document.addEventListener('click', onFolderClick);
+      };
+
+      modalOpenButton.addEventListener('click', onOpenModalButtonClick);
+    }
+
+  });
 });
 
 // ---------------------------------

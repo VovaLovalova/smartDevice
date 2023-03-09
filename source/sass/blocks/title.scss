@@ -67,13 +67,13 @@
   display: none;
 }
 
-@media (max-width: 1919px) and (min-width: 1024px) {
+@media (min-width: 1023px) and (max-width: 1919px) {
   .title__container {
     padding-left: 20%;
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .title {
     min-height: 640px;
     margin-top: -15px;

@@ -854,12 +854,12 @@ button,
   left: 314px;
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid tomato;
+  border: 1px solid #ff0000;
   font-family: "PT Mono", "Arial", monospace;
   font-size: 16px;
   line-height: 22px;
   padding: 3px 5px;
-  color: tomato;
+  color: #ff0000;
 }
 
 .contact-form__form {
@@ -1525,12 +1525,12 @@ label[for=modal-checkbox]::before {
   left: 8px;
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid tomato;
+  border: 1px solid #ff0000;
   font-family: "PT Mono", "Arial", monospace;
   font-size: 16px;
   line-height: 22px;
   padding: 3px 5px;
-  color: tomato;
+  color: #ff0000;
 }
 
 /* @mixin hover-focus {
@@ -2093,7 +2093,7 @@ label[for=modal-checkbox]::before {
   }
 }
 
-@media (max-width: 1919px) and (min-width: 1024px) {
+@media (max-width: 1919px) and (min-width: 1023px) {
   .logo {
     margin-right: 0;
   }
@@ -2112,10 +2112,6 @@ label[for=modal-checkbox]::before {
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
-  }
-
-  .title__container {
-    padding-left: 20%;
   }
 
   .advantages-card {
@@ -2256,32 +2252,6 @@ label[for=modal-checkbox]::before {
 
   .header button {
     display: none;
-  }
-
-  .title {
-    min-height: 640px;
-    margin-top: -15px;
-    background-image: url("../../img/main-bg-tablet.jpg");
-  }
-
-  .title__container {
-    width: 770px;
-    padding: 192px 50px 218px;
-  }
-
-  .title h1 {
-    font-size: 64px;
-    line-height: 75px;
-    letter-spacing: 0.09em;
-    margin-bottom: 4px;
-  }
-
-  .title p {
-    margin-bottom: 73px;
-  }
-
-  .title a {
-    margin-left: 46px;
   }
 
   .advantages {
@@ -2522,5 +2492,39 @@ label[for=modal-checkbox]::before {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1919px) {
+  .title__container {
+    padding-left: 20%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    min-height: 640px;
+    margin-top: -15px;
+    background-image: url("../../img/main-bg-tablet.jpg");
+  }
+
+  .title__container {
+    width: 770px;
+    padding: 192px 50px 218px;
+  }
+
+  .title h1 {
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: 0.09em;
+    margin-bottom: 4px;
+  }
+
+  .title p {
+    margin-bottom: 73px;
+  }
+
+  .title a {
+    margin-left: 46px;
   }
 }
