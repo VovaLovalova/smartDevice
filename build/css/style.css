@@ -2,7 +2,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../..//fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/Roboto-Condensed-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Condensed-Regular.woff") format("woff");
+  src: url("../fonts/Roboto-Condensed-Regular.woff2") format("woff2"), url("../fonts/Roboto-Condensed-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/Roboto-Condensed-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Condensed-Regular.woff") format("woff");
+  src: url("../fonts/Roboto-Condensed-Bold.woff2") format("woff2"), url("../fonts/Roboto-Condensed-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -26,7 +26,7 @@
   font-family: "PT Mono";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"), url("../../fonts/pt-mono-regular.woff") format("woff");
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -321,7 +321,7 @@ button,
   width: 100%;
   min-height: 880px;
   background-color: #000000;
-  background-image: url("../../img/main-bg.jpg");
+  background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -723,21 +723,21 @@ button,
   top: 590px;
   background-color: #00b2ff;
   border-radius: 3px 0 0 0;
-  background-image: url("../../img/arrow.svg");
+  background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .goods-card--1 {
-  background-image: url("../../img/goods/card1.png");
+  background-image: url("../img/goods/card1.png");
 }
 
 .goods-card--2 {
-  background-image: url("../../img/goods/card2.png");
+  background-image: url("../img/goods/card2.png");
 }
 
 .goods-card--3 {
-  background-image: url("../../img/goods/card3.png");
+  background-image: url("../img/goods/card3.png");
 }
 
 .goods-card a {
@@ -1022,7 +1022,7 @@ label[for=input-agreement]::after {
 }
 
 .contact-form__form input[type=checkbox]:checked + label[for=input-agreement]::after {
-  background-image: url("../../img/check-mark.svg");
+  background-image: url("../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1468,7 +1468,7 @@ label[for=modal-checkbox]::before {
   left: -25px;
   width: 15px;
   height: 15px;
-  background-image: url("../../img/check-mark.svg");
+  background-image: url("../img/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1496,7 +1496,7 @@ label[for=modal-checkbox]::before {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  background-image: url("../../img/close.svg");
+  background-image: url("../img/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -1590,12 +1590,6 @@ label[for=modal-checkbox]::before {
     margin-right: 0;
   }
 
-  .footer__logo {
-    margin-right: 0;
-    width: 215px;
-    margin-left: 50px;
-  }
-
   .footer__logo .logo__container {
     display: block;
   }
@@ -1612,7 +1606,7 @@ label[for=modal-checkbox]::before {
   }
 
   .header-contacts {
-    margin-right: 0;
+    margin-right: 8px;
     width: 82px;
   }
 
@@ -1633,8 +1627,13 @@ label[for=modal-checkbox]::before {
   }
 
   .header__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding-left: 26px;
+    padding-right: 35px;
   }
 
   .header button {
@@ -1644,11 +1643,12 @@ label[for=modal-checkbox]::before {
   .title {
     min-height: 560px;
     margin-top: 0;
-    background-image: url("../../img/main-bg-mobile.jpg");
+    background-image: url("../img/main-bg-mobile.jpg");
   }
 
   .title__container {
-    width: 320px;
+    width: 100%;
+    min-width: 320px;
     padding: 149px 25px 70px;
   }
 
@@ -1691,18 +1691,20 @@ label[for=modal-checkbox]::before {
   }
 
   .advantages__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 50px 25px 47px;
   }
 
   .advantages ul {
-    -ms-grid-columns: 270px;
-    grid-template-columns: 270px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     margin: 0;
   }
 
   .advantages-card {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     height: 340px;
     padding: 30px 30px 35px;
   }
@@ -1736,7 +1738,8 @@ label[for=modal-checkbox]::before {
   }
 
   .about-company__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 0 25px 80px;
   }
 
@@ -1761,7 +1764,8 @@ label[for=modal-checkbox]::before {
   }
 
   .about-company__text-container {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     margin-left: 0;
     margin-bottom: 17px;
   }
@@ -1781,7 +1785,8 @@ label[for=modal-checkbox]::before {
   }
 
   .goods__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 48px 25px 70px;
   }
 
@@ -1792,8 +1797,8 @@ label[for=modal-checkbox]::before {
   }
 
   .goods ul {
-    -ms-grid-columns: 270px;
-    grid-template-columns: 270px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     row-gap: 30px;
   }
 
@@ -1802,11 +1807,13 @@ label[for=modal-checkbox]::before {
   }
 
   .goods__text--mobile {
-    display: inline;
+    display: block;
+    padding-right: 15px;
   }
 
   .goods-card {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     height: 250px;
   }
 
@@ -1819,7 +1826,7 @@ label[for=modal-checkbox]::before {
   }
 
   .goods-card::before {
-    left: 230px;
+    left: calc(100% - 40px);
     top: 210px;
     width: 40px;
     height: 40px;
@@ -1830,20 +1837,21 @@ label[for=modal-checkbox]::before {
   }
 
   .goods-card--1 {
-    background-image: url("../../img/goods/card1-mobile.jpg");
+    background-image: url("../img/goods/card1-mobile.jpg");
   }
 
   .goods-card--2 {
-    background-image: url("../../img/goods/card2-mobile.jpg");
+    background-image: url("../img/goods/card2-mobile.jpg");
   }
 
   .goods-card--3 {
-    background-image: url("../../img/goods/card3-mobile.jpg");
+    background-image: url("../img/goods/card3-mobile.jpg");
   }
 
   .goods-card a {
     display: block;
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     height: 250px;
     padding: 26px 30px 80px;
     background-color: rgba(4, 24, 39, 0.5);
@@ -1855,12 +1863,14 @@ label[for=modal-checkbox]::before {
   }
 
   .contact-form__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 45px 25px 90px;
   }
 
   .contact-form__form {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
   }
 
   .contact-form__container::before {
@@ -1890,18 +1900,20 @@ label[for=modal-checkbox]::before {
 
   .contact-form__form input[type=text],
   .contact-form__form input[type=tel] {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
   }
 
   .contact-form__form textarea {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     padding-top: 24px;
     height: 180px;
   }
 
   .contact-form__input-container {
-    -ms-grid-columns: 270px;
-    grid-template-columns: 270px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     margin-left: 0;
     margin-bottom: 32px;
   }
@@ -1950,8 +1962,27 @@ label[for=modal-checkbox]::before {
     width: 320px;
     margin-right: 0;
     padding: 21px 25px;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
+    position: relative;
+  }
+
+  .navigation::before {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: #ffffff;
+    top: 0;
+    left: calc((100vw - 100%) / -2);
+  }
+
+  .navigation::after {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: calc((100vw - 100%) / -2);
   }
 
   .navigation h3 {
@@ -1981,20 +2012,25 @@ label[for=modal-checkbox]::before {
   .navigation button {
     position: absolute;
     top: 20px;
-    left: 279px;
+    left: 275px;
     display: block;
-    width: 15px;
-    height: 15px;
-    border: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  .navigation button:hover {
+    border: 1px solid #ffffff;
+    border-radius: 4px;
   }
 
   .navigation button::before {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 9px;
+    left: 2px;
     width: 15px;
     height: 1px;
     background-color: #ffffff;
@@ -2003,8 +2039,8 @@ label[for=modal-checkbox]::before {
   .navigation__button--open::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 7px;
+    top: 2px;
+    left: 9px;
     width: 1px;
     height: 15px;
     background-color: #ffffff;
@@ -2014,7 +2050,17 @@ label[for=modal-checkbox]::before {
     width: 320px;
     margin-right: 0;
     padding: 22px 24px;
-    border-bottom: 1px solid #ffffff;
+    position: relative;
+  }
+
+  .contacts::after {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: calc((100vw - 100%) / -2);
   }
 
   .contacts .contacts__container--close {
@@ -2028,20 +2074,25 @@ label[for=modal-checkbox]::before {
   .contacts button {
     position: absolute;
     top: 20px;
-    left: 279px;
+    left: 275px;
     display: block;
-    width: 15px;
-    height: 15px;
-    border: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  .contacts button:hover {
+    border: 1px solid #ffffff;
+    border-radius: 4px;
   }
 
   .contacts button::before {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 9px;
+    left: 2px;
     width: 15px;
     height: 1px;
     background-color: #ffffff;
@@ -2050,8 +2101,8 @@ label[for=modal-checkbox]::before {
   .contacts__button--open::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 7px;
+    top: 2px;
+    left: 9px;
     width: 1px;
     height: 15px;
     background-color: #ffffff;
@@ -2090,10 +2141,13 @@ label[for=modal-checkbox]::before {
 
   .footer__logo {
     margin-bottom: 79px;
+    margin-right: 0;
+    width: 215px;
+    margin-left: 50px;
   }
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: 1919px) and (min-width: 1024px) {
   .logo {
     margin-right: 0;
   }
@@ -2112,6 +2166,10 @@ label[for=modal-checkbox]::before {
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .title__container {
+    padding-left: 20%;
   }
 
   .advantages-card {
@@ -2254,6 +2312,32 @@ label[for=modal-checkbox]::before {
     display: none;
   }
 
+  .title {
+    min-height: 640px;
+    margin-top: -15px;
+    background-image: url("../img/main-bg-tablet.jpg");
+  }
+
+  .title__container {
+    width: 770px;
+    padding: 192px 50px 218px;
+  }
+
+  .title h1 {
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: 0.09em;
+    margin-bottom: 4px;
+  }
+
+  .title p {
+    margin-bottom: 73px;
+  }
+
+  .title a {
+    margin-left: 46px;
+  }
+
   .advantages {
     height: 830px;
   }
@@ -2352,15 +2436,15 @@ label[for=modal-checkbox]::before {
   }
 
   .goods-card--1 {
-    background-image: url("../../img/goods/card1-tablet.jpg");
+    background-image: url("../img/goods/card1-tablet.jpg");
   }
 
   .goods-card--2 {
-    background-image: url("../../img/goods/card2-tablet.jpg");
+    background-image: url("../img/goods/card2-tablet.jpg");
   }
 
   .goods-card--3 {
-    background-image: url("../../img/goods/card3-tablet.jpg");
+    background-image: url("../img/goods/card3-tablet.jpg");
   }
 
   .goods-card a {
@@ -2492,39 +2576,5 @@ label[for=modal-checkbox]::before {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-  }
-}
-
-@media (min-width: 1023px) and (max-width: 1919px) {
-  .title__container {
-    padding-left: 20%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .title {
-    min-height: 640px;
-    margin-top: -15px;
-    background-image: url("../../img/main-bg-tablet.jpg");
-  }
-
-  .title__container {
-    width: 770px;
-    padding: 192px 50px 218px;
-  }
-
-  .title h1 {
-    font-size: 64px;
-    line-height: 75px;
-    letter-spacing: 0.09em;
-    margin-bottom: 4px;
-  }
-
-  .title p {
-    margin-bottom: 73px;
-  }
-
-  .title a {
-    margin-left: 46px;
   }
 }

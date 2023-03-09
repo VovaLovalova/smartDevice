@@ -69,14 +69,14 @@
   clip-path: inset(100%);
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .navigation {
     width: 394px;
     margin-right: 0;
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .navigation {
     width: 320px;
     margin-right: 0;
@@ -92,13 +92,32 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .navigation {
     width: 320px;
     margin-right: 0;
     padding: 21px 25px;
-    border-top: 1px solid $color-default-white;
-    border-bottom: 1px solid $color-default-white;
+    position: relative;
+  }
+
+  .navigation::before {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: $color-default-white;
+    top: 0;
+    left: calc((100vw - 100%) / -2);
+  }
+
+  .navigation::after {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: $color-default-white;
+    bottom: 0;
+    left: calc((100vw - 100%) / -2);
   }
 
   .navigation h3 {
@@ -127,20 +146,25 @@
   .navigation button {
     position: absolute;
     top: 20px;
-    left: 279px;
+    left: 275px;
     display: block;
-    width: 15px;
-    height: 15px;
-    border: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  .navigation button:hover {
+    border: 1px solid $color-default-white;
+    border-radius: 4px;
   }
 
   .navigation button::before {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 9px;
+    left: 2px;
     width: 15px;
     height: 1px;
     background-color: $color-default-white;
@@ -149,8 +173,8 @@
   .navigation__button--open::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 7px;
+    top: 2px;
+    left: 9px;
     width: 1px;
     height: 15px;
     background-color: $color-default-white;

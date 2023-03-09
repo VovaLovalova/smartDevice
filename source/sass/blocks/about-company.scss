@@ -92,7 +92,7 @@
   left: 350px;
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .about-company h2 {
     margin-left: 34%;
   }
@@ -111,7 +111,7 @@
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .about-company {
     min-height: 460px;
   }
@@ -145,13 +145,14 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .about-company {
     min-height: 385px;
   }
 
   .about-company__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 0 25px 80px;
   }
 
@@ -176,7 +177,8 @@
   }
 
   .about-company__text-container {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     margin-left: 0;
     margin-bottom: 17px;
   }

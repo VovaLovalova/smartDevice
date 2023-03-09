@@ -37,20 +37,20 @@
   clip-path: inset(100%);
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .social {
     left: 7%;
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .social {
     top: 42px;
     left: 575px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .social {
     top: 92px;
     left: 87px;

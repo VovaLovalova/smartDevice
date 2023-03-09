@@ -18,7 +18,7 @@
   position: relative;
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .footer__container {
     max-width: 1220px;
     padding-left: 50px;
@@ -27,7 +27,7 @@
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .footer {
     height: 465px;
   }
@@ -46,7 +46,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .footer {
     min-height: 325px;
     height: auto;
@@ -61,5 +61,8 @@
 
   .footer__logo {
     margin-bottom: 79px;
+    margin-right: 0;
+    width: 215px;
+    margin-left: 50px;
   }
 }

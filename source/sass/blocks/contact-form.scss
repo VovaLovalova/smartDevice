@@ -191,7 +191,7 @@ label[for="input-agreement"]::after {
 }
 
 .contact-form__form input[type="checkbox"]:checked + label[for="input-agreement"]::after {
-  background-image: url("../../img/check-mark.svg");
+  background-image: url("../img/check-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -221,7 +221,7 @@ label[for="input-agreement"]::after {
   border: none;
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .contact-form__container {
     padding-left: 40%;
   }
@@ -239,7 +239,7 @@ label[for="input-agreement"]::after {
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .contact-form {
     height: 580px;
   }
@@ -307,19 +307,21 @@ label[for="input-agreement"]::after {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .contact-form {
     min-height: 750px;
     height: 580px;
   }
 
   .contact-form__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 45px 25px 90px;
   }
 
   .contact-form__form {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
   }
 
   .contact-form__container::before {
@@ -349,17 +351,19 @@ label[for="input-agreement"]::after {
 
   .contact-form__form input[type="text"],
   .contact-form__form input[type="tel"] {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
   }
 
   .contact-form__form textarea {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     padding-top: 24px;
     height: 180px;
   }
 
   .contact-form__input-container {
-    grid-template-columns: 270px;
+    grid-template-columns: 1fr;
     margin-left: 0;
     margin-bottom: 32px;
   }

@@ -41,7 +41,7 @@
   background-color: $color-alice-blue;
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .header__container {
     max-width: 980px;
     width: 100%;
@@ -51,7 +51,7 @@
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .header {
     position: absolute;
     padding-top: 20px;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .header {
     position: absolute;
     padding-top: 14px;
@@ -80,8 +80,11 @@
   }
 
   .header__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
+    justify-content: space-between;
     padding-left: 26px;
+    padding-right: 35px;
   }
 
   .header button {

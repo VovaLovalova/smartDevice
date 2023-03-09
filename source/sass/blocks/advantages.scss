@@ -40,7 +40,7 @@
   row-gap: 30px;
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .advantages {
     height: 830px;
   }
@@ -55,18 +55,19 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .advantages {
     min-height: 1420px;
   }
 
   .advantages__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 50px 25px 47px;
   }
 
   .advantages ul {
-    grid-template-columns: 270px;
+    grid-template-columns: 1fr;
     margin: 0;
   }
 }

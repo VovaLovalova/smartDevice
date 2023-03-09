@@ -25,7 +25,7 @@
   margin-right: 15px;
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .header-contacts {
     margin-right: 0;
     max-width: 380px;
@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .header-contacts {
     margin-right: 0;
     margin-top: -13px;
@@ -49,9 +49,9 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .header-contacts {
-    margin-right: 0;
+    margin-right: 8px;
     width: 82px;
   }
 

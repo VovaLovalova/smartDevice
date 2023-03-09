@@ -16,21 +16,21 @@
   top: 590px;
   background-color: $color-deep-sky-blue;
   border-radius: 3px 0 0 0;
-  background-image: url("../../img/arrow.svg");
+  background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .goods-card--1 {
-  background-image: url("../../img/goods/card1.png");
+  background-image: url("../img/goods/card1.png");
 }
 
 .goods-card--2 {
-  background-image: url("../../img/goods/card2.png");
+  background-image: url("../img/goods/card2.png");
 }
 
 .goods-card--3 {
-  background-image: url("../../img/goods/card3.png");
+  background-image: url("../img/goods/card3.png");
 }
 
 .goods-card a {
@@ -60,7 +60,7 @@
   display: none;
 }
 
-@media (max-width: 1919px) and (min-width: 1023px) {
+@media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .goods-card {
     width: 280px;
   }
@@ -76,7 +76,7 @@
 }
 
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .goods-card {
     width: 670px;
     height: 250px;
@@ -96,15 +96,15 @@
   }
 
   .goods-card--1 {
-    background-image: url("../../img/goods/card1-tablet.jpg");
+    background-image: url("../img/goods/card1-tablet.jpg");
   }
 
   .goods-card--2 {
-    background-image: url("../../img/goods/card2-tablet.jpg");
+    background-image: url("../img/goods/card2-tablet.jpg");
   }
 
   .goods-card--3 {
-    background-image: url("../../img/goods/card3-tablet.jpg");
+    background-image: url("../img/goods/card3-tablet.jpg");
   }
 
   .goods-card a {
@@ -116,9 +116,10 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .goods-card {
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     height: 250px;
   }
 
@@ -131,7 +132,7 @@
   }
 
   .goods-card::before {
-    left: 230px;
+    left: calc(100% - 40px);
     top: 210px;
     width: 40px;
     height: 40px;
@@ -142,20 +143,21 @@
   }
 
   .goods-card--1 {
-    background-image: url("../../img/goods/card1-mobile.jpg");
+    background-image: url("../img/goods/card1-mobile.jpg");
   }
 
   .goods-card--2 {
-    background-image: url("../../img/goods/card2-mobile.jpg");
+    background-image: url("../img/goods/card2-mobile.jpg");
   }
 
   .goods-card--3 {
-    background-image: url("../../img/goods/card3-mobile.jpg");
+    background-image: url("../img/goods/card3-mobile.jpg");
   }
 
   .goods-card a {
     display: block;
-    width: 270px;
+    min-width: 270px;
+    width: 100%;
     height: 250px;
     padding: 26px 30px 80px;
     background-color: rgba(4, 24, 39, 0.5);
