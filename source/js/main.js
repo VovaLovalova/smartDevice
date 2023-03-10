@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let contactForm = document.querySelector('.contact-form__form');
   let contactFormContainer = document.querySelector('.contact-form__confirm-container');
   let contactCheckbox = document.querySelector('#input-agreement');
+  let contactCheckboxLabel = document.querySelector('label[for=input-agreement]');
   let erorr = document.createElement('div');
   erorr.textContent = 'Необходимо дать согласие';
   erorr.setAttribute('id', 'error');
@@ -29,8 +30,19 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  let onContactCheckboxLabelClick = function (e) {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      if (!contactCheckbox.checked) {
+        contactCheckbox.checked = true;
+      } else {
+        contactCheckbox.checked = false;
+      }
+    }
+  };
+
   contactForm.addEventListener('submit', onSubmitContactForm);
   contactCheckbox.addEventListener('change', onContactCheckboxChange);
+  contactCheckboxLabel.addEventListener('keydown', onContactCheckboxLabelClick);
 
   //  МАСКА ДЛЯ ВВОДА НОМЕРА ТЕЛЕФОНА
   let phoneInput = document.querySelectorAll('input[type=tel]');
@@ -170,17 +182,60 @@ window.addEventListener('DOMContentLoaded', () => {
     let nameInput = document.querySelector('#modal-input-name');
     let html = document.querySelector('html');
     let modalCheckbox = document.querySelector('#modal-checkbox');
+    let modalCheckboxLabel = document.querySelector('label[for=modal-checkbox]');
 
-    if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput && modalCheckbox) {
+    if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput && modalCheckbox && modalCheckboxLabel) {
+      let focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+      let focusableElements = modal.querySelectorAll(focusableElementsString);
+      focusableElements = Array.prototype.slice.call(focusableElements);
+      let firstTabStop = focusableElements[0];
+      let lastTabStop = focusableElements[focusableElements.length - 1];
+
+      let removeListners = function () {
+        modalCloseButton.removeEventListener('click', onCloseModalButtonClick);
+        document.removeEventListener('keydown', onEscKeydown);
+        modalForm.removeEventListener('submit', onSubmitModalForm);
+        document.removeEventListener('click', onFolderClick);
+        modalCheckboxLabel.removeEventListener('keydown', onModalCheckboxLabelClick);
+        modalCheckbox.removeEventListener('change', onModalCheckboxChange);
+        modal.removeEventListener('keydown', onTabClick);
+      };
+
+      let onTabClick = function (e) {
+        if (focusableElements.length > 0) {
+          if (e.keyCode === 9) {
+            if (e.shiftKey) {
+              if (document.activeElement === firstTabStop) {
+                e.preventDefault();
+                lastTabStop.focus();
+              }
+            } else {
+              if (document.activeElement === lastTabStop) {
+                e.preventDefault();
+                firstTabStop.focus();
+              }
+            }
+          }
+        }
+      };
+
+      let focus = function () {
+        modalOpenButton.focus();
+      };
+
       let onCloseModalButtonClick = function () {
         modal.classList.add('modal--close');
         html.setAttribute('style', 'overflow-y: auto;');
+        focus();
+        removeListners();
       };
 
       let onEscKeydown = function (e) {
         if (e.keyCode === 27) {
           modal.classList.add('modal--close');
           html.setAttribute('style', 'overflow-y: auto;');
+          focus();
+          removeListners();
         }
       };
 
@@ -188,6 +243,8 @@ window.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) {
           modal.classList.add('modal--close');
           html.setAttribute('style', 'overflow-y: auto;');
+          focus();
+          removeListners();
         }
       };
 
@@ -201,6 +258,8 @@ window.addEventListener('DOMContentLoaded', () => {
           modalForm.submit();
           modal.classList.add('modal--close');
           html.setAttribute('style', 'overflow-y: auto;');
+          focus();
+          removeListners();
         }
       };
 
@@ -210,17 +269,32 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      modalCheckbox.addEventListener('change', onModalCheckboxChange);
+      let onModalCheckboxLabelClick = function (e) {
+        if (e.keyCode === 13 || e.keyCode === 32) {
+          if (!modalCheckbox.checked) {
+            modalCheckbox.checked = true;
+          } else {
+            modalCheckbox.checked = false;
+          }
+        }
+      };
+
+      let addListeners = function () {
+        modalCloseButton.addEventListener('click', onCloseModalButtonClick);
+        document.addEventListener('keydown', onEscKeydown);
+        modalForm.addEventListener('submit', onSubmitModalForm);
+        document.addEventListener('click', onFolderClick);
+        modalCheckboxLabel.addEventListener('keydown', onModalCheckboxLabelClick);
+        modalCheckbox.addEventListener('change', onModalCheckboxChange);
+        modal.addEventListener('keydown', onTabClick);
+      };
 
       let onOpenModalButtonClick = function () {
         modal.classList.remove('modal--close');
         html.setAttribute('style', 'overflow-y: hidden;');
         nameInput.focus();
 
-        modalCloseButton.addEventListener('click', onCloseModalButtonClick);
-        document.addEventListener('keydown', onEscKeydown);
-        modalForm.addEventListener('submit', onSubmitModalForm);
-        document.addEventListener('click', onFolderClick);
+        addListeners();
       };
 
       modalOpenButton.addEventListener('click', onOpenModalButtonClick);
