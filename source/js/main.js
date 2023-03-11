@@ -4,29 +4,51 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // ЧЕКБОКС ФОРМЫ НА ГЛАВНОЙ СТРАНИЦЕ
+  // ВАЛИДАЦИЯ ФОРМЫ НА ГЛАВНОЙ СТРАНИЦЕ
   let contactForm = document.querySelector('.contact-form__form');
-  let contactFormContainer = document.querySelector('.contact-form__confirm-container');
+  let contactFormInputContainer = document.querySelector('.contact-form__input-container');
+  let contactFormConfirmContainer = document.querySelector('.contact-form__confirm-container');
   let contactCheckbox = document.querySelector('#input-agreement');
   let contactCheckboxLabel = document.querySelector('label[for=input-agreement]');
-  let erorr = document.createElement('div');
-  erorr.textContent = 'Необходимо дать согласие';
-  erorr.setAttribute('id', 'error');
+  let contactPhoneInput = contactForm.querySelector('input[type=tel]');
+
+  let erorrCheckbox = document.createElement('div');
+  erorrCheckbox.textContent = 'Необходимо дать согласие';
+  erorrCheckbox.setAttribute('id', 'errorCheckbox');
+
+  let erorrPhone = document.createElement('div');
+  erorrPhone.textContent = 'Длинна номера не менее 11 символов';
+  erorrPhone.setAttribute('id', 'errorPhone');
 
   let onSubmitContactForm = function (evt) {
     evt.preventDefault();
-    if (!contactCheckbox.checked) {
-      if (contactFormContainer.querySelectorAll('#error').length === 0) {
-        contactFormContainer.appendChild(erorr);
+
+    let contactPhoneInputNumbersLength = contactPhoneInput.value.replace(/\D/g, '').length;
+
+    if (contactPhoneInputNumbersLength < 11) {
+      if (contactFormInputContainer.querySelectorAll('#errorPhone').length === 0) {
+        contactFormInputContainer.appendChild(erorrPhone);
       }
     } else {
-      contactForm.submit();
+      if (!contactCheckbox.checked) {
+        if (contactFormConfirmContainer.querySelectorAll('#errorCheckbox').length === 0) {
+          contactFormConfirmContainer.appendChild(erorrCheckbox);
+        }
+      } else {
+        contactForm.submit();
+      }
+    }
+  };
+
+  let onPnoneInput = function () {
+    if (contactFormInputContainer.querySelectorAll('#errorPhone').length > 0) {
+      contactFormInputContainer.removeChild(erorrPhone);
     }
   };
 
   let onContactCheckboxChange = function () {
-    if (contactFormContainer.querySelectorAll('#error').length > 0) {
-      contactFormContainer.removeChild(erorr);
+    if (contactFormConfirmContainer.querySelectorAll('#errorCheckbox').length > 0) {
+      contactFormConfirmContainer.removeChild(erorrCheckbox);
     }
   };
 
@@ -41,6 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   contactForm.addEventListener('submit', onSubmitContactForm);
+  contactPhoneInput.addEventListener('input', onPnoneInput);
   contactCheckbox.addEventListener('change', onContactCheckboxChange);
   contactCheckboxLabel.addEventListener('keydown', onContactCheckboxLabelClick);
 
@@ -183,6 +206,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let html = document.querySelector('html');
     let modalCheckbox = document.querySelector('#modal-checkbox');
     let modalCheckboxLabel = document.querySelector('label[for=modal-checkbox]');
+    let modalPhoneInput = modalForm.querySelector('input[type=tel]');
 
     if (modal && modalOpenButton && modalCloseButton && modalForm && nameInput && modalCheckbox && modalCheckboxLabel) {
       let focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
@@ -199,6 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modalCheckboxLabel.removeEventListener('keydown', onModalCheckboxLabelClick);
         modalCheckbox.removeEventListener('change', onModalCheckboxChange);
         modal.removeEventListener('keydown', onTabClick);
+        modalPhoneInput.removeEventListener('input', onModalPnoneInput);
       };
 
       let onTabClick = function (e) {
@@ -250,22 +275,37 @@ window.addEventListener('DOMContentLoaded', () => {
 
       let onSubmitModalForm = function (evt) {
         evt.preventDefault();
-        if (!modalCheckbox.checked) {
-          if (modalForm.querySelectorAll('#error').length === 0) {
-            modalForm.appendChild(erorr);
+
+        let modalPhoneInputNumbersLength = modalPhoneInput.value.replace(/\D/g, '').length;
+
+        if (modalPhoneInputNumbersLength < 11) {
+          if (modalForm.querySelectorAll('#errorPhone').length === 0) {
+            modalForm.appendChild(erorrPhone);
           }
         } else {
-          modalForm.submit();
-          modal.classList.add('modal--close');
-          html.setAttribute('style', 'overflow-y: auto;');
-          focus();
-          removeListners();
+          if (!modalCheckbox.checked) {
+            if (modalForm.querySelectorAll('#errorCheckbox').length === 0) {
+              modalForm.appendChild(erorrCheckbox);
+            }
+          } else {
+            modalForm.submit();
+            modal.classList.add('modal--close');
+            html.setAttribute('style', 'overflow-y: auto;');
+            focus();
+            removeListners();
+          }
+        }
+      };
+
+      let onModalPnoneInput = function () {
+        if (modalForm.querySelectorAll('#errorPhone').length > 0) {
+          modalForm.removeChild(erorrPhone);
         }
       };
 
       let onModalCheckboxChange = function () {
-        if (modalForm.querySelectorAll('#error').length > 0) {
-          modalForm.removeChild(erorr);
+        if (modalForm.querySelectorAll('#errorCheckbox').length > 0) {
+          modalForm.removeChild(erorrCheckbox);
         }
       };
 
@@ -287,6 +327,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modalCheckboxLabel.addEventListener('keydown', onModalCheckboxLabelClick);
         modalCheckbox.addEventListener('change', onModalCheckboxChange);
         modal.addEventListener('keydown', onTabClick);
+        modalPhoneInput.addEventListener('input', onModalPnoneInput);
       };
 
       let onOpenModalButtonClick = function () {
