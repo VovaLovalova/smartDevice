@@ -197,45 +197,6 @@ button,
   clip-path: inset(100%);
 }
 
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 215px;
-  margin-right: 160px;
-}
-
-.logo__image {
-  margin-right: 15px;
-}
-
-.logo__container {
-  width: 145px;
-}
-
-.logo__text {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
-  color: #f2f5f7;
-  margin: 5px 0 0;
-}
-
-.logo__description {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0;
-}
-
 .header-contacts {
   margin-right: 165px;
   display: -webkit-box;
@@ -264,6 +225,7 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border: 1px solid transparent;
 }
 
 .header-contacts a:hover {
@@ -304,6 +266,10 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding-left: 350px;
+}
+
+.header__logo {
+  margin-right: 160px;
 }
 
 .header button {
@@ -1315,6 +1281,10 @@ label[for=input-agreement]::after {
   position: relative;
 }
 
+.footer__logo {
+  margin-right: 160px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -1610,36 +1580,6 @@ label[for=modal-checkbox]::before {
 */
 
 @media (max-width: 767px) {
-  .logo {
-    margin-right: 133px;
-    width: 35px;
-  }
-
-  .logo__container {
-    display: none;
-  }
-
-  .logo__image {
-    width: 35px;
-    height: 35px;
-    margin-right: 0;
-  }
-
-  .footer__logo .logo__container {
-    display: block;
-  }
-
-  .footer__logo .logo__text {
-    margin-top: 0;
-    margin-bottom: 3px;
-  }
-
-  .footer__logo .logo__image {
-    width: 55px;
-    height: 55px;
-    margin-right: 15px;
-  }
-
   .header-contacts {
     margin-right: 8px;
     width: 82px;
@@ -1669,6 +1609,15 @@ label[for=modal-checkbox]::before {
     justify-content: space-between;
     padding-left: 26px;
     padding-right: 35px;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .header__logo-image {
+    width: 35px;
+    height: 35px;
   }
 
   .header button {
@@ -2183,10 +2132,6 @@ label[for=modal-checkbox]::before {
 }
 
 @media (max-width: 1919px) and (min-width: 1024px) {
-  .logo {
-    margin-right: 0;
-  }
-
   .header-contacts {
     margin-right: 0;
     max-width: 380px;
@@ -2201,6 +2146,10 @@ label[for=modal-checkbox]::before {
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .header__logo {
+    margin-right: 0;
   }
 
   .title__container {
@@ -2304,22 +2253,30 @@ label[for=modal-checkbox]::before {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
+
+  .footer__logo {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-  .logo {
-    margin-right: 344px;
-  }
-
-  .logo__text {
-    margin-top: -1px;
-    margin-bottom: 2px;
-  }
-
   .header-contacts {
     margin-right: 0;
     margin-top: -13px;
     width: 100px;
+  }
+
+  .header-contacts a {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .header-contacts span {
@@ -2327,7 +2284,7 @@ label[for=modal-checkbox]::before {
   }
 
   .header-contacts svg {
-    margin-right: 18px;
+    margin-right: 0;
   }
 
   .header {
@@ -2341,6 +2298,10 @@ label[for=modal-checkbox]::before {
   .header__container {
     width: 770px;
     padding-left: 50px;
+  }
+
+  .header__logo {
+    margin-right: 335px;
   }
 
   .header button {

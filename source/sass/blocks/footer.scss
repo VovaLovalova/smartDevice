@@ -19,12 +19,20 @@
   position: relative;
 }
 
+.footer__logo {
+  margin-right: 160px;
+}
+
 @media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .footer__container {
     max-width: 1220px;
     padding-left: 50px;
     padding-right: 50px;
     justify-content: space-between;
+  }
+
+  .footer__logo {
+    margin-right: 0;
   }
 }
 
