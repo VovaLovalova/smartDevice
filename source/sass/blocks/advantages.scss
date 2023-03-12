@@ -42,7 +42,7 @@
 
 @media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .advantages {
-    height: 830px;
+    min-height: 830px;
   }
 
   .advantages__container {

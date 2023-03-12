@@ -50,6 +50,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 85px;
+  row-gap: 40px;
   max-width: 1220px;
   width: 100%;
 }
@@ -75,7 +76,7 @@
 
 @media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .goods {
-    height: 1080px;
+    min-height: 1080px;
   }
 
   .goods__container {
