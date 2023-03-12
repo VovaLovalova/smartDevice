@@ -62,16 +62,18 @@
   }
 
   .footer__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 35px 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .footer__logo {
     margin-bottom: 79px;
     margin-right: 0;
     width: 215px;
-    margin-left: 50px;
+    margin-left: -4px;
   }
 }

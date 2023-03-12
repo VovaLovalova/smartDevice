@@ -1221,7 +1221,14 @@ label[for=input-agreement]::after {
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
   margin-bottom: 10px;
+}
+
+.contacts p {
   width: 345px;
+}
+
+.contacts a {
+  width: 174px;
 }
 
 .contacts a:hover {
@@ -1939,34 +1946,16 @@ label[for=modal-checkbox]::before {
 
   .social {
     top: 92px;
-    left: 87px;
+    left: calc(50% - 73px);
   }
 
   .navigation {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     margin-right: 0;
     padding: 21px 25px;
-    position: relative;
-  }
-
-  .navigation::before {
-    content: " ";
-    position: absolute;
-    width: 100vw;
-    height: 1px;
-    background-color: #ffffff;
-    top: 0;
-    left: calc((100vw - 100%) / -2);
-  }
-
-  .navigation::after {
-    content: " ";
-    position: absolute;
-    width: 100vw;
-    height: 1px;
-    background-color: #ffffff;
-    bottom: 0;
-    left: calc((100vw - 100%) / -2);
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
   }
 
   .navigation h3 {
@@ -1975,7 +1964,7 @@ label[for=modal-checkbox]::before {
 
   .navigation ul {
     min-height: 203px;
-    margin-top: 10px;
+    margin-top: 18px;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
@@ -1995,11 +1984,11 @@ label[for=modal-checkbox]::before {
 
   .navigation button {
     position: absolute;
-    top: 20px;
-    left: 275px;
+    top: 0px;
+    right: 0;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 58px;
     border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
@@ -2013,8 +2002,8 @@ label[for=modal-checkbox]::before {
   .navigation button::before {
     content: "";
     position: absolute;
-    top: 9px;
-    left: 2px;
+    top: 28px;
+    right: 26px;
     width: 15px;
     height: 1px;
     background-color: #ffffff;
@@ -2023,28 +2012,19 @@ label[for=modal-checkbox]::before {
   .navigation__button--open::after {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 9px;
+    top: 21px;
+    right: 33px;
     width: 1px;
     height: 15px;
     background-color: #ffffff;
   }
 
   .contacts {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     margin-right: 0;
     padding: 22px 24px;
-    position: relative;
-  }
-
-  .contacts::after {
-    content: " ";
-    position: absolute;
-    width: 100vw;
-    height: 1px;
-    background-color: #ffffff;
-    bottom: 0;
-    left: calc((100vw - 100%) / -2);
+    border-bottom: 1px solid #ffffff;
   }
 
   .contacts .contacts__container--close {
@@ -2057,11 +2037,11 @@ label[for=modal-checkbox]::before {
 
   .contacts button {
     position: absolute;
-    top: 20px;
-    left: 275px;
+    top: 0px;
+    right: 0;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 60px;
     border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
@@ -2075,8 +2055,8 @@ label[for=modal-checkbox]::before {
   .contacts button::before {
     content: "";
     position: absolute;
-    top: 9px;
-    left: 2px;
+    top: 28px;
+    right: 26px;
     width: 15px;
     height: 1px;
     background-color: #ffffff;
@@ -2085,8 +2065,8 @@ label[for=modal-checkbox]::before {
   .contacts__button--open::after {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 9px;
+    top: 21px;
+    right: 33px;
     width: 1px;
     height: 15px;
     background-color: #ffffff;
@@ -2104,6 +2084,7 @@ label[for=modal-checkbox]::before {
     font-size: 14px;
     line-height: 25px;
     margin-bottom: 5px;
+    width: 154px;
   }
 
   .footer {
@@ -2112,7 +2093,8 @@ label[for=modal-checkbox]::before {
   }
 
   .footer__container {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
     padding: 35px 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2121,13 +2103,16 @@ label[for=modal-checkbox]::before {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .footer__logo {
     margin-bottom: 79px;
     margin-right: 0;
     width: 215px;
-    margin-left: 50px;
+    margin-left: -4px;
   }
 }
 

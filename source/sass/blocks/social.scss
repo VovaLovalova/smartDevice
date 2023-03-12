@@ -53,6 +53,6 @@
 @media (max-width: $mobile-width) {
   .social {
     top: 92px;
-    left: 87px;
+    left: calc(50% - 73px);
   }
 }
