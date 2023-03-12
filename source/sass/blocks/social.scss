@@ -1,22 +1,31 @@
 .social {
   position: absolute;
-  top: 122px;
+  top: 119px;
   left: 360px;
 }
 
 .social ul {
   list-style-type: none;
   width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0;
+}
+
+.social li {
+  width: 40px;
   height: 40px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .social a {
   fill: $color-alice-blue;
   cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .social a:hover {
@@ -45,14 +54,14 @@
 
 @media (max-width: $tablet-max-width) and (min-width: $tablet-min-width) {
   .social {
-    top: 42px;
+    top: 39px;
     left: 575px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .social {
-    top: 92px;
+    top: 88px;
     left: calc(50% - 73px);
   }
 }

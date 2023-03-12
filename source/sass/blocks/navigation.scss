@@ -20,21 +20,23 @@
 
 .navigation ul {
   list-style-type: none;
+  min-height: 130px;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 150px;
+  display: grid;
+  grid-template-areas:
+  "a e"
+  "b f"
+  "c g"
+  "d .";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 5px;
 }
 
 .navigation li {
-  width: 249px;
+  width: 220px;
   min-height: 20px;
-}
-
-.navigation li:not(:nth-child(4n)) {
-  margin-bottom: 5px;
 }
 
 .navigation a {
@@ -84,11 +86,17 @@
   }
 
   .navigation ul {
-    height: 230px;
-  }
-
-  .navigation li:not(:last-child) {
-    margin-bottom: 5px;
+    grid-template-areas:   "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g";
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 2px;
+    min-height: 230px;
   }
 }
 
@@ -107,6 +115,8 @@
   }
 
   .navigation ul {
+    display: flex;
+    flex-direction: column;
     min-height: 203px;
     margin-top: 18px;
     flex-wrap: nowrap;
