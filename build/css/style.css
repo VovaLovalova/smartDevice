@@ -1645,7 +1645,7 @@ label[for=modal-checkbox]::before {
 
   .header {
     position: absolute;
-    padding-top: 14px;
+    padding-top: 11px;
     padding-bottom: 20px;
     min-height: 70px;
     top: 0;
@@ -2405,7 +2405,7 @@ label[for=modal-checkbox]::before {
   .advantages-card {
     width: 320px;
     min-height: 360px;
-    padding: 40px 35px 35px 45px;
+    padding: 40px 35px 30px 45px;
   }
 
   .advantages-card svg {
@@ -2422,11 +2422,11 @@ label[for=modal-checkbox]::before {
 
   .about-company__container {
     width: 770px;
-    padding: 42px 50px 80px;
+    padding: 23px 50px 80px;
   }
 
   .about-company img {
-    top: 46px;
+    top: 30px;
     left: 46px;
   }
 
@@ -2454,7 +2454,7 @@ label[for=modal-checkbox]::before {
 
   .goods__container {
     width: 770px;
-    padding: 54px 50px 75px;
+    padding: 54px 50px 60px;
   }
 
   .goods ul {
@@ -2511,7 +2511,7 @@ label[for=modal-checkbox]::before {
 
   .contact-form__container {
     width: 770px;
-    padding: 44px 50px 120px;
+    padding: 46px 50px 120px;
   }
 
   .contact-form__container::before {
