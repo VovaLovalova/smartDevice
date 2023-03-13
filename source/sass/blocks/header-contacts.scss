@@ -1,7 +1,9 @@
 .header-contacts {
   margin-right: 165px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 26px;
+  row-gap: 10px;
   width: 460px;
 }
 
@@ -16,6 +18,11 @@
   align-items: center;
   user-select: none;
   border: 1px solid transparent;
+  width: 225px;
+}
+
+.header-contacts span {
+  white-space: nowrap;
 }
 
 .header-contacts a:hover {
@@ -28,9 +35,13 @@
 
 @media (max-width: $desktop-elastic-max-width) and (min-width: $desktop-elastic-min-width) {
   .header-contacts {
-    margin-right: 0;
+    margin-right: 20px;
     max-width: 380px;
     width: 100%;
+  }
+
+  .header-contacts a {
+    width: auto;
   }
 }
 
@@ -38,7 +49,12 @@
   .header-contacts {
     margin-right: 0;
     margin-top: -13px;
-    width: 100px;
+    min-width: 100px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .header-contacts a {
@@ -60,8 +76,21 @@
 
 @media (max-width: $mobile-width) {
   .header-contacts {
-    margin-right: 8px;
-    width: 82px;
+    margin-right: 0;
+    min-width: 82px;
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .header-contacts a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .header-contacts span {

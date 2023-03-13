@@ -199,12 +199,14 @@ button,
 
 .header-contacts {
   margin-right: 165px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+  -webkit-column-gap: 26px;
+  -moz-column-gap: 26px;
+  column-gap: 26px;
+  row-gap: 10px;
   width: 460px;
 }
 
@@ -226,6 +228,11 @@ button,
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
+  width: 225px;
+}
+
+.header-contacts span {
+  white-space: nowrap;
 }
 
 .header-contacts a:hover {
@@ -1598,8 +1605,34 @@ label[for=modal-checkbox]::before {
 
 @media (max-width: 767px) {
   .header-contacts {
-    margin-right: 8px;
-    width: 82px;
+    margin-right: 0;
+    min-width: 82px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .header-contacts a {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .header-contacts span {
@@ -2136,9 +2169,13 @@ label[for=modal-checkbox]::before {
 
 @media (max-width: 1919px) and (min-width: 1024px) {
   .header-contacts {
-    margin-right: 0;
+    margin-right: 20px;
     max-width: 380px;
     width: 100%;
+  }
+
+  .header-contacts a {
+    width: auto;
   }
 
   .header__container {
@@ -2266,7 +2303,20 @@ label[for=modal-checkbox]::before {
   .header-contacts {
     margin-right: 0;
     margin-top: -13px;
-    width: 100px;
+    min-width: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .header-contacts a {
