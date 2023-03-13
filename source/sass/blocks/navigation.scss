@@ -25,10 +25,10 @@
   margin: 0;
   display: grid;
   grid-template-areas:
-  "a e"
-  "b f"
-  "c g"
-  "d .";
+    "a e"
+    "b f"
+    "c g"
+    "d .";
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 5px;
@@ -86,13 +86,14 @@
   }
 
   .navigation ul {
-    grid-template-areas:   "a"
-    "b"
-    "c"
-    "d"
-    "e"
-    "f"
-    "g";
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g";
     grid-template-columns: 1fr;
     column-gap: 30px;
     row-gap: 2px;
@@ -137,7 +138,7 @@
 
   .navigation button {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     display: block;
     width: 100%;

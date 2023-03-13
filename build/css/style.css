@@ -2035,7 +2035,7 @@ label[for=modal-checkbox]::before {
 
   .navigation button {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     display: block;
     width: 100%;
@@ -2088,7 +2088,7 @@ label[for=modal-checkbox]::before {
 
   .contacts button {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     display: block;
     width: 100%;
