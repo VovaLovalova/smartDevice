@@ -184,14 +184,6 @@ window.addEventListener('DOMContentLoaded', () => {
     contactsButton.addEventListener('click', onContactsButtonClick);
   }
 
-  // НАВИГАЦИЯ В ФУТЕРЕ
-  let navItemArray = navigation.querySelectorAll('li');
-  let navAreaArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
-
-  for (let i = 0; i < 7; i++) {
-    navItemArray[i].style.gridArea = `${navAreaArray[i]}`;
-  }
-
   // Utils
   // ---------------------------------
 

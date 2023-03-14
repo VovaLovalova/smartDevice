@@ -1140,24 +1140,27 @@ label[for=input-agreement]::after {
 
 .navigation ul {
   list-style-type: none;
-  min-height: 130px;
+  min-height: 142px;
   padding: 0;
   margin: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 5px auto 5px auto 5px auto;
-  grid-template-areas: "a e" "b f" "c g" "d .";
-  -ms-grid-columns: 1fr 30px 1fr;
-  grid-template-columns: 1fr 1fr;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
-  row-gap: 5px;
 }
 
 .navigation li {
-  width: 220px;
+  max-width: 220px;
   min-height: 20px;
+  margin-bottom: 7px;
+}
+
+.navigation li:nth-child(4n) {
+  -webkit-column-break-before: avoid;
+  -moz-column-break-before: avoid;
+  break-before: avoid;
 }
 
 .navigation a {
@@ -2586,15 +2589,14 @@ label[for=modal-checkbox]::before {
   }
 
   .navigation ul {
-    -ms-grid-rows: auto 2px auto 2px auto 2px auto 2px auto 2px auto 2px auto;
-    grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    row-gap: 2px;
     min-height: 230px;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .navigation li {
+    margin-bottom: 6px;
   }
 
   .contacts {

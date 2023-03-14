@@ -20,23 +20,21 @@
 
 .navigation ul {
   list-style-type: none;
-  min-height: 130px;
+  min-height: 142px;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-areas:
-    "a e"
-    "b f"
-    "c g"
-    "d .";
-  grid-template-columns: 1fr 1fr;
+  column-count: 2;
   column-gap: 30px;
-  row-gap: 5px;
 }
 
 .navigation li {
-  width: 220px;
+  max-width: 220px;
   min-height: 20px;
+  margin-bottom: 7px;
+}
+
+.navigation li:nth-child(4n) {
+  break-before: avoid;
 }
 
 .navigation a {
@@ -86,18 +84,12 @@
   }
 
   .navigation ul {
-    grid-template-areas:
-      "a"
-      "b"
-      "c"
-      "d"
-      "e"
-      "f"
-      "g";
-    grid-template-columns: 1fr;
-    column-gap: 30px;
-    row-gap: 2px;
     min-height: 230px;
+    column-count: 1;
+  }
+
+  .navigation li {
+    margin-bottom: 6px;
   }
 }
 
